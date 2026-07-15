@@ -2,6 +2,8 @@
 
 /**
  * @var \Femundfilou\AssetManager\AssetManager $assetManager
+ * @var \Kirby\Cms\App $kirby
+ * @var \Kirby\Cms\Site $site
  */
 
 $assetManager->add('js', vite()->asset('frontend/snippets/header.ts'), ['type' => 'module']);
