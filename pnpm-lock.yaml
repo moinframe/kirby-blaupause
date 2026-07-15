@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@unseenco/taxi':
-        specifier: ^1.9.1
-        version: 1.9.1
       cleacss:
         specifier: ^3.2.0
         version: 3.2.0
@@ -23,6 +20,9 @@ importers:
       unlazy:
         specifier: ^2.0.1
         version: 2.0.1
+      web-vitals:
+        specifier: ^5.3.0
+        version: 5.3.0
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.5.3
@@ -78,9 +78,6 @@ importers:
       svgstore:
         specifier: ^3.0.1
         version: 3.0.1
-      terser:
-        specifier: ^5.49.0
-        version: 5.49.0
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -698,12 +695,6 @@ packages:
 
   '@unlazy/core@2.0.1':
     resolution: {integrity: sha512-zARfhkFhALS5EGdym22E8OrNSEbHDhG8XBUFHr8I435U7JnM8r4Y8g6I+utdKMrxJARcAJx7WGDUo/h9CntWCg==}
-
-  '@unseenco/e@2.5.0':
-    resolution: {integrity: sha512-9eJ6Anii+eoreu1TKxZRImCqoQ2djFrtNToZj++MTLW1j/NbmVCQUeO/x/86VxV7HINsZ8GuFkNfRJKb03HR/Q==}
-
-  '@unseenco/taxi@1.9.1':
-    resolution: {integrity: sha512-jT86n7H750CUJytsDy9v+C27roO8dXjbUnXyK5330Hptpv3RWg2mZ/XiAOYXAjVmZ7vZu3HIXUmeCqDmGqWD9w==}
 
   acorn@8.16.0:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
@@ -1689,9 +1680,6 @@ packages:
     resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
     engines: {node: '>=11.0.0'}
 
-  selector-set@1.1.5:
-    resolution: {integrity: sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==}
-
   semver@7.7.4:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
     engines: {node: '>=10'}
@@ -1928,6 +1916,9 @@ packages:
   walk-up-path@4.0.0:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
+
+  web-vitals@5.3.0:
+    resolution: {integrity: sha512-q6LWsLatGYZp5VGBIOvbTj6JBV2nOmC8KvWztXBmwJcfFAzhwKwbOxhUH306XY3CcaZDUlSmSuNPBsCn0bFu+g==}
 
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
@@ -2176,6 +2167,7 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
+    optional: true
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -2456,14 +2448,6 @@ snapshots:
 
   '@unlazy/core@2.0.1': {}
 
-  '@unseenco/e@2.5.0':
-    dependencies:
-      selector-set: 1.1.5
-
-  '@unseenco/taxi@1.9.1':
-    dependencies:
-      '@unseenco/e': 2.5.0
-
   acorn@8.16.0: {}
 
   agent-base@8.0.0: {}
@@ -2620,7 +2604,8 @@ snapshots:
 
   commander@12.1.0: {}
 
-  commander@2.20.3: {}
+  commander@2.20.3:
+    optional: true
 
   compare-func@2.0.0:
     dependencies:
@@ -3434,8 +3419,6 @@ snapshots:
 
   sax@1.6.0: {}
 
-  selector-set@1.1.5: {}
-
   semver@7.7.4: {}
 
   semver@7.8.1: {}
@@ -3465,6 +3448,7 @@ snapshots:
     dependencies:
       buffer-from: 1.1.2
       source-map: 0.6.1
+    optional: true
 
   source-map@0.6.1: {}
 
@@ -3559,6 +3543,7 @@ snapshots:
       acorn: 8.16.0
       commander: 2.20.3
       source-map-support: 0.5.21
+    optional: true
 
   tinyexec@1.2.2: {}
 
@@ -3665,6 +3650,8 @@ snapshots:
       vite: 8.1.4(@types/node@26.1.1)(jiti@2.7.0)(terser@5.49.0)
 
   walk-up-path@4.0.0: {}
+
+  web-vitals@5.3.0: {}
 
   whatwg-encoding@3.1.1:
     dependencies:

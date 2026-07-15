@@ -4,7 +4,15 @@
 This template is a starter for new projects, mainly developed out of personal needs. It's based on the tools and technologies we work with and might serve as an inspiration to others.
 
 ## Frontend setup
-The frontend uses [pnpm](https://pnpm.io), is built using [Vite]([https://vitejs.](https://vitejs.dev/)) with [lightingcss](https://lightningcss.dev/) as css transformer and minifier. [cleacss](https://cleacss.dev) is preinstalled as css framework. Scripts are handled by Typescript, [svelte](https://svelte.dev) and [taxi](https://taxi.js.org) are preconfigured if needed.
+The frontend uses [pnpm](https://pnpm.io), is built using [Vite](https://vitejs.dev/) with [lightningcss](https://lightningcss.dev/) as css transformer and minifier. [cleacss](https://cleacss.dev) is preinstalled as css framework. Scripts are handled by Typescript, [svelte](https://svelte.dev) is preconfigured if needed. Linting and formatting is handled by [Biome](https://biomejs.dev) (`pnpm lint`, `pnpm format`).
+
+Page transitions use native [cross-document view transitions](https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API) combined with the [Speculation Rules API](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API) for prerendering — no JS router needed, browsers without support get regular navigations.
+
+### Frontend modules
+Modules in `frontend/lib` are installed automatically on page load if they export an `install` function. Rename a module to `<name>.off.ts` to disable it. Optional modules that ship disabled:
+- `lenis.off.ts` — smooth scrolling via [lenis](https://lenis.darkroom.engineering)
+- `htmx.off.ts` — [htmx](https://htmx.org) integration
+- `webVitals.off.ts` — reports Core Web Vitals to Plausible as custom events
 
 ## Preinstalled plugins
 - distantnative/retour-for-kirby

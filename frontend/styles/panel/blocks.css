@@ -2,8 +2,7 @@
 	background-color: transparent;
 	box-shadow: none;
 
-	&>.k-blocks-list>.k-block-container {
-
+	& > .k-blocks-list > .k-block-container {
 		&:not(:last-of-type) {
 			border-bottom: none;
 			margin-bottom: 1rem;

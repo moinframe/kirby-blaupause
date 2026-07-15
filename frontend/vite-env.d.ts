@@ -2,13 +2,12 @@
 /// <reference types="vite/client" />
 
 import type htmx from "htmx.org"
-import type { Core } from "@unseenco/taxi"
 
 declare global {
 	interface Window {
 		htmx: htmx
-		Taxi: Core
-		_paq?: unkown
-		CookieConsent?: unknown
+		_paq?: unknown
+		CookieConsent?: { getUserConsent?: () => string[] }
+		plausible?: (event: string, options?: { props?: Record<string, string | number> }) => void
 	}
 }

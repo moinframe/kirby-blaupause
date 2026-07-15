@@ -6,13 +6,13 @@ ul.menu {
 		border-bottom: 2px solid transparent;
 
 		& a {
-			font-size: var(--clea-size-6);
-			font-weight: var(--clea-font-weight-bold);
+			font-size: var(--font-size-6);
+			font-weight: var(--font-weight-bold);
 			line-height: 1;
 		}
 
 		&.is-active {
-			border-color: var(--clea-base-color);
+			border-color: var(--color-base);
 		}
 	}
 }

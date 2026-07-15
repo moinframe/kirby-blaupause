@@ -9,7 +9,7 @@ use Kirby\Cms\Html;
  */
 
 $assetManager->add('css', vite()->asset('frontend/styles/blocks/video.css'));
-$assetManager->add('js', vite()->asset('frontend/blocks/video.ts'), ['data-taxi-reload', 'type' => 'module']);
+$assetManager->add('js', vite()->asset('frontend/blocks/video.ts'), ['type' => 'module']);
 
 
 $crop    = $block->crop()->isTrue();
@@ -35,7 +35,7 @@ $poster = $block->poster()->toFile() ? $block->poster()->toFile()->thumb($thumbC
 			poster="<?= $poster ?>"
 			message="<?= t('privacy-overlay.message') ?>"
 			button-text="<?= t('privacy-overlay.button') ?>">
-			<?= Html::video($block->url(), [], ['data-src' => $block->url(), 'src' => '']); ?>
+			<?= Html::video($block->url(), [], ['data-src' => $block->url(), 'src' => '', 'title' => t('video.iframe.title')]); ?>
 		</privacy-video>
 	<?php else : ?>
 		<video <?= e($block->loop()->toBool(), 'autoplay muted loop', 'controls') ?> playsinline <?= e($poster, 'poster="' . $poster . '"'); ?>>

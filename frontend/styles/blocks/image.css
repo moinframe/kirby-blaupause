@@ -18,17 +18,17 @@
 		aspect-ratio: var(--aspect-ratio);
 		width: 100%;
 		height: auto;
-		max-width: var(--max-width, "none");
+		max-width: var(--max-width, none);
 	}
 
 	& figcaption {
-		max-width: var(--max-width, "none");
+		max-width: var(--max-width, none);
 	}
 
 	& img {
 		width: 100%;
 		height: auto;
 		object-position: center;
-		object-fit: var(--object-fit, "contain");
+		object-fit: var(--object-fit, contain);
 	}
 }

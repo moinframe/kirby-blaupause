@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import svgstore from "svgstore"
 import fs from "node:fs/promises"
 import path from "node:path"
 import { glob } from "glob"
 import { optimize } from "svgo"
+import svgstore from "svgstore"
 import yargs from "yargs"
 
 const argv = yargs(process.argv.slice(2))
@@ -39,7 +39,7 @@ async function createSvgSprite(inputPath, outputPath, projectAbbreviation) {
 
 			const svgoResult = optimize(svgFile, getOptimizationOptions(name))
 			const optimizedSvg = svgoResult.data.replace(
-				/(<svg [a-z -"=\/\. \d:]*>)/g,
+				/(<svg [a-z -"=/. \d:]*>)/g,
 				`$1<title id="${name}-icon">${name}</title>`
 			)
 

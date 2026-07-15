@@ -1,24 +1,26 @@
-@import "cleacss/untranspiled";
-@import "lenis/dist/lenis.css";
+@layer framework, defaults, components, pages;
+
+@import "cleacss/untranspiled" layer(framework);
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+@import "styles/variables/_colors.css";
 @import "styles/variables/_media-queries.css";
 /*--------------------------------------------------------------
 # Settings & Utilities
 --------------------------------------------------------------*/
-@import "styles/_accessibility.css";
-@import "styles/_transitions.css";
-@import "styles/_animations.css";
+@import "styles/_accessibility.css" layer(defaults);
+@import "styles/_animations.css" layer(defaults);
+@import "styles/_view-transitions.css";
 /*--------------------------------------------------------------
 # Styles
 --------------------------------------------------------------*/
-@import "styles/_menu.css";
-@import "styles/_blocks.css";
-@import "styles/_i.css";
-@import "styles/_main.css";
+@import "styles/_menu.css" layer(components);
+@import "styles/_blocks.css" layer(components);
+@import "styles/_i.css" layer(components);
+@import "styles/_main.css" layer(components);
 /*--------------------------------------------------------------
 # Styles Page
 --------------------------------------------------------------*/
-@import "styles/page/_header.css";
-@import "styles/page/_footer.css";
+@import "styles/page/_header.css" layer(pages);
+@import "styles/page/_footer.css" layer(pages);

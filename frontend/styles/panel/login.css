@@ -1,7 +1,6 @@
 .k-login-view {
 	position: relative;
 
-
 	&::before {
 		background-color: var(--color-black);
 		content: "";

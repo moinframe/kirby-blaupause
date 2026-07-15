@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.1/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -7,49 +7,49 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"ignore": [
-			"public/**",
-			"backend/**",
-			"storage/**",
-			"node_modules/**",
-			"dist/**",
-			"build/**",
-			"coverage/**",
-			"**/*.min.js"
+		"includes": [
+			"**",
+			"!**/public",
+			"!**/backend",
+			"!**/storage",
+			"!**/node_modules",
+			"!**/dist",
+			"!**/build",
+			"!**/coverage",
+			"!**/*.min.js"
 		]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
 		"lineWidth": 120,
-		"ignore": []
+		"includes": ["**"]
 	},
-	"organizeImports": {
-		"enabled": true
-	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
+			"preset": "recommended",
 			"correctness": {
-				"noUnusedVariables": "error"
+				"noUnusedVariables": "error",
+				"noUnknownMediaFeatureName": "off"
 			},
 			"suspicious": {
 				"noExplicitAny": "warn",
-				"noConsoleLog": "warn"
+				"noConsole": "warn"
 			},
 			"complexity": {
 				"noForEach": "off"
 			},
 			"performance": {
-				"recommended": true
+				"preset": "recommended"
 			},
 			"style": {
 				"noNegationElse": "warn",
-				"useShorthandArrayType": "error"
+				"useConsistentArrayType": { "level": "error", "options": { "syntax": "shorthand" } }
 			}
 		},
-		"ignore": []
+		"includes": ["**"]
 	},
 	"javascript": {
 		"formatter": {
@@ -70,5 +70,35 @@
 			"allowComments": true,
 			"allowTrailingCommas": false
 		}
-	}
+	},
+	"css": {
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["frontend/assets/**"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"noSvgWithoutTitle": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["scripts/**"],
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noConsole": "off"
+					}
+				}
+			}
+		}
+	]
 }

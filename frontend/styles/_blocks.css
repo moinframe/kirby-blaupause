@@ -1,6 +1,8 @@
 .flow {
-	>.block {
+	> .block {
 		width: 100%;
 		flex: 1 1 100%;
+		content-visibility: auto;
+		contain-intrinsic-size: auto 500px;
 	}
 }

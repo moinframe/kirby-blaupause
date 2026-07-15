@@ -1,5 +1,16 @@
+# Buttons
 button.skip-menu: Zum Hauptinhalt springen
 button.menu: Menü
+
+# Aria Labels
+aria.nav.main: Hauptnavigation
+
+# Privacy Overlay
+privacy-overlay.message: Mit dem Ansehen des Videos laden Sie Inhalte von {provider}.
+privacy-overlay.button: Akzeptieren
+
+# Video
+video.iframe.title: Video-Player
 
 # Panel
 
@@ -149,8 +160,3 @@ panel.blocks.jumpmark.fields.jumpmark.label: Identifikator
 panel.blocks.jumpmark.fields.jumpmark.help: Hier sollte ein für die Seite einzigartiger Name verwendet werden. Kleinschreibung und keine Leerzeichen.
 panel.blocks.spacer.name: Abstand
 panel.blocks.spacer.fields.height.label: Höhe
-
-
-# Privacy Overlay
-privacy-overlay.message: Mit dem Ansehen des Videos laden Sie Inhalte von {provider}.
-privacy-overlay.button: Akzeptieren

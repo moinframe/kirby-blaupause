@@ -11,7 +11,7 @@
 			width: 100%;
 			height: 100%;
 			object-position: center;
-			object-fit: var(--object-fit, "contain");
+			object-fit: var(--object-fit, contain);
 			display: flex;
 			border: 0;
 		}
@@ -76,7 +76,6 @@
 				align-items: center;
 				justify-content: center;
 				gap: var(--space-xs);
-				align-items: center;
 				width: 100%;
 
 				@media (--m) {

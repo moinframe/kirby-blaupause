@@ -1,6 +1,6 @@
 #page-header {
 	--_background: transparent;
-	--_color: var(--color-black);
+	--_color: var(--color-base);
 	position: absolute;
 	z-index: 99;
 	top: 0;
@@ -14,8 +14,6 @@
 	a {
 		color: var(--_color);
 	}
-
-	&.ready {}
 
 	&.scrolled {
 		transition: transform 0.15s var(--ease-out);
@@ -47,24 +45,10 @@
 		}
 	}
 
-
-	.logo {
-		--_width: calc(6rem + var(--space-s));
-		--color-base: var(--color-blue);
-		max-width: var(--_width);
-		display: block;
-		flex: 1 1 var(--_width);
-		border-right: 1px solid var(--color-white);
-		margin-right: var(--space-xs);
-		padding-right: var(--space-s);
-	}
-
 	& nav {
 		.submenu a {
 			color: var(--color-black);
 		}
-
-		>ul {}
 
 		li {
 			border: 0;
@@ -74,7 +58,7 @@
 				font-weight: var(--font-weight-normal);
 				padding-block: 0.75em;
 
-				@media(--m) {
+				@media (--m) {
 					padding-block: var(--space-s);
 				}
 
@@ -95,12 +79,12 @@
 
 			&:hover,
 			&:focus-visible {
-				>a>span {
+				> a > span {
 					font-weight: var(--font-weight-bold);
 				}
 			}
 
-			&.is-active>a>span {
+			&.is-active > a > span {
 				font-weight: var(--font-weight-bold);
 			}
 		}
@@ -119,6 +103,14 @@
 			padding: 2em;
 			display: flex;
 
+			/* Without JS the toggle cannot work, show the menu expanded instead */
+			@media (scripting: none) {
+				position: static;
+				transform: none;
+				opacity: 1;
+				visibility: visible;
+			}
+
 			a {
 				color: var(--color-black);
 			}
@@ -130,25 +122,31 @@
 		}
 	}
 
-	label.button {
+	button[aria-controls="mainnav"] {
 		position: relative;
 		z-index: 2;
-		padding-right: var(--button-padding-x);
+		padding-right: var(--button-padding-inline);
 		font-size: 1.2em;
 
 		.i {
 			display: none;
 		}
 
-		&:has(input:checked) {
+		@media (scripting: none) {
+			display: none;
+		}
+
+		&[aria-expanded="true"] {
 			padding-right: 1em;
 
 			.i {
 				display: inline-flex;
 			}
 
-			&+nav {
-				transition: transform 0.2s ease-in, opacity 0.2s 0.1s ease-in;
+			& + nav {
+				transition:
+					transform 0.2s ease-in,
+					opacity 0.2s 0.1s ease-in;
 				transform: translateY(100%);
 				opacity: 1;
 				visibility: visible;

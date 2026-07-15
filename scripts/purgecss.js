@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import fs from "node:fs"
 import { exec } from "node:child_process"
-import { glob } from "glob"
+import fs from "node:fs"
 import path from "node:path"
+import { glob } from "glob"
 import purgeCSSConfig from "../purgecss.config.cjs"
 
 const getFileSizeInKB = filePath => {

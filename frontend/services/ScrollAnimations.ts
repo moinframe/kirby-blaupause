@@ -19,9 +19,6 @@ export default class ScrollAnimations {
 		this.init()
 	}
 
-	/**
-	 * Gets the singleton instance of ScrollAnimations
-	 */
 	public static getInstance(): ScrollAnimations {
 		if (!ScrollAnimations.instance) {
 			ScrollAnimations.instance = new ScrollAnimations()
@@ -39,21 +36,24 @@ export default class ScrollAnimations {
 		}
 	}
 
-	/**
-	 * Adds a new element to the observer
-	 * @param element - The element to add
-	 */
 	public addElement(element: Element): void {
-		DebugService.log("Adding element to ScrollAnimations", element)
+		// Content in or above the current viewport stays visible (the view
+		// transition covers page entry), only content below animates on scroll
+		if (element.getBoundingClientRect().top < window.innerHeight) {
+			element.classList.add("animated")
+			DebugService.log("Element within viewport, skipping animation", element)
+			return
+		}
+
+		if (element instanceof HTMLElement && element.dataset.delay) {
+			element.style.setProperty("--delay", `${element.dataset.delay}s`)
+		}
 		element.classList.add("ready")
 		this.observer.observe(element)
 		this.animatedElements.add(element)
+		DebugService.log("Adding element to ScrollAnimations", element)
 	}
 
-	/**
-	 * Adds multiple elements to the observer
-	 * @param elements - The elements to add
-	 */
 	public addElements(elements: Element[] | NodeListOf<Element>): void {
 		for (const element of elements) {
 			this.addElement(element)
@@ -72,30 +72,13 @@ export default class ScrollAnimations {
 		ScrollAnimations.instance = null
 	}
 
-	/**
-	 * Reinitializes the ScrollAnimations instance
-	 * @remarks Useful for reinitializing animations after DOM changes
-	 */
-	public static reinitialize(): void {
-		if (ScrollAnimations.instance) {
-			ScrollAnimations.instance.destroy()
-		}
-		ScrollAnimations.instance = new ScrollAnimations()
-		DebugService.log("ScrollAnimations reinitialized")
-	}
-
-	/**
-	 * Handles intersection events for observed elements
-	 */
 	private handleIntersection = (entries: IntersectionObserverEntry[]): void => {
 		for (const { isIntersecting, target } of entries) {
 			if (isIntersecting) {
-				const element = target as HTMLElement
-				const delay = Number.parseFloat(element.dataset.delay || "0") * 1000
-				setTimeout(() => element.classList.add("animated"), delay)
-				this.observer.unobserve(element)
-				this.animatedElements.delete(element)
-				DebugService.log("Element animated", element)
+				target.classList.add("animated")
+				this.observer.unobserve(target)
+				this.animatedElements.delete(target)
+				DebugService.log("Element animated", target)
 			}
 		}
 	}

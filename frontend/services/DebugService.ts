@@ -1,3 +1,5 @@
+/* biome-ignore-all lint/suspicious/noConsole: console output is this service's purpose */
+
 /**
  * Module for handling debug logging
  * @remarks Uses console methods for output

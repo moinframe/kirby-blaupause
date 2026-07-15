@@ -1,24 +1,20 @@
 import DebugService from "./DebugService"
 
 /**
- * Manages split text animations
- * @remarks Works with elements having data-animation="split-text" attribute
+ * Splits text into word spans for staggered animations
+ * @remarks Works with elements having data-animation-prepare="split-words" attribute.
+ * Screen readers get the original text via a visually hidden copy,
+ * the word spans are hidden from the accessibility tree.
  */
 export default class SplitWords {
 	private elements: NodeListOf<HTMLElement>
 
-	/**
-	 * @param customSelector - Optional custom selector to override default
-	 */
 	constructor(customSelector?: string) {
 		const selector = customSelector || '[data-animation-prepare="split-words"]'
 		this.elements = document.querySelectorAll(selector)
 		this.init()
 	}
 
-	/**
-	 * Initializes the split text animation for all matching elements
-	 */
 	private init(): void {
 		for (const element of this.elements) {
 			this.splitElement(element)
@@ -26,29 +22,34 @@ export default class SplitWords {
 		DebugService.log(`Split text animation initialized for ${this.elements.length} elements`)
 	}
 
-	/**
-	 * Splits the text of a single element
-	 * @param element - The element to apply split text animation to
-	 */
 	private splitElement(element: HTMLElement): void {
-		const originalText = element.textContent || ""
-		const words = originalText.trim().split(/\s+/)
+		if (element.dataset.split === "done") return
+
+		const originalText = (element.textContent || "").trim()
+		const words = originalText.split(/\s+/)
 		const animationDelay = Number.parseFloat(element.getAttribute("data-delay") || "0.1")
 
-		element.innerHTML = ""
-		element.setAttribute("aria-label", originalText)
+		const screenReaderText = document.createElement("span")
+		screenReaderText.className = "visually-hidden"
+		screenReaderText.textContent = originalText
+
+		const wordContainer = document.createElement("span")
+		wordContainer.setAttribute("aria-hidden", "true")
 
 		words.forEach((word, index) => {
 			const span = document.createElement("span")
+			span.className = "word"
 			span.textContent = word
 			span.style.setProperty("--delay", `${index * animationDelay}s`)
-			element.appendChild(span)
+			wordContainer.appendChild(span)
 
-			// Add a space after each word, except the last one
 			if (index < words.length - 1) {
-				element.appendChild(document.createTextNode(" "))
+				wordContainer.appendChild(document.createTextNode(" "))
 			}
 		})
+
+		element.replaceChildren(screenReaderText, wordContainer)
+		element.dataset.split = "done"
 
 		DebugService.log("Split text prepared for element", element)
 	}

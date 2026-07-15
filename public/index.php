@@ -2,9 +2,6 @@
 
 use Kirby\Cms\App;
 
-// Disable dump to be used with ray
-define("KIRBY_HELPER_DUMP", false);
-
 $base = __DIR__;
 $storage = dirname(__DIR__) . '/storage';
 $backend = dirname(__DIR__) . '/backend';

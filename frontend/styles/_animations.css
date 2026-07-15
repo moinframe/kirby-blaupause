@@ -16,77 +16,70 @@
 	--animation-easing: var(--ease-out);
 }
 
-/* Base style for all animation */
+/*
+ * Hidden states only apply to elements below the initial viewport
+ * (JS marks those with `.ready`), so pages are fully visible at first
+ * paint: view transitions stay a plain crossfade and content is never
+ * hidden without JS.
+ */
 [data-animation].ready {
 	transition: all var(--animation-duration) var(--animation-easing);
+	transition-delay: var(--delay, 0s);
 }
 
 /* Fade in up animation */
-[data-animation="fade-in-up"] {
-	transform: translateY(1.5rem);
+[data-animation="fade-in-up"].ready:not(.animated) {
+	translate: 0 1.5rem;
 	opacity: 0;
-
-	&.animated {
-		transform: translateY(0);
-		opacity: 1;
-	}
 }
 
 /* Fade in left animation */
-[data-animation="fade-in-left"] {
-	transform: translateX(-1.5rem);
+[data-animation="fade-in-left"].ready:not(.animated) {
+	translate: -1.5rem 0;
 	opacity: 0;
-
-	&.animated {
-		transform: translateX(0);
-		opacity: 1;
-	}
 }
 
 /* Scale in animation */
-[data-animation="scale-in"] {
-	transform: scale(0.9);
+[data-animation="scale-in"].ready:not(.animated) {
+	scale: 0.9;
 	opacity: 0;
-
-	&.animated {
-		transform: scale(1);
-		opacity: 1;
-	}
 }
 
 /* Words Up Animation, needs data-animation-prepare=["split-words"] */
 [data-animation="words-up"] {
-	opacity: 1;
-
-	> span {
+	& .word {
 		display: inline-block;
-		opacity: 0;
-		transform: translateY(1em);
-		transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+		transition:
+			opacity 0.5s var(--ease-out),
+			translate 0.5s var(--ease-out);
 	}
 
-	&.animated > span {
-		opacity: 1;
-		transform: translateY(0);
+	&.ready:not(.animated) .word {
+		opacity: 0;
+		translate: 0 1em;
+	}
+
+	&.animated .word {
 		transition-delay: calc(var(--delay, 0s) + 0.2s);
 	}
 }
 
-/* Clip reveal animation,  needs data-animation-prepare=["split-words"] */
+/* Clip reveal animation, needs data-animation-prepare=["split-words"] */
 [data-animation="clip-reveal"] {
-	opacity: 1;
-
-	> span {
+	& .word {
 		display: inline-block;
-		transform: translate3d(0, 1em, 0);
-		clip-path: inset(100% 0 0 0);
-		will-change: clip-path;
-		transition: transform var(--animation-duration) var(--ease-out), clip-path var(--animation-duration) var(--ease-out);
+		transition:
+			translate var(--animation-duration) var(--ease-out),
+			clip-path var(--animation-duration) var(--ease-out);
 	}
 
-	&.animated > span {
+	&.ready:not(.animated) .word {
+		translate: 0 1em;
+		clip-path: inset(100% 0 0 0);
+	}
+
+	&.animated .word {
 		clip-path: inset(0 0 0 0);
-		transform: translate3d(0, 0, 0);
 		transition-delay: calc(var(--delay, 0s) + 0.2s);
 	}
 }
