@@ -39,4 +39,4 @@ tabs:
             type: pages
             width: 1/2
             image: false
-  seo: seo/site
+  seo: tabs/seo/site

@@ -1,0 +1,14 @@
+{
+	"name": "project-panel",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx -y kirbyup serve src/index.js",
+		"build": "npx -y kirbyup src/index.js"
+	},
+	"keywords": [],
+	"author": "Justus Kraft <justus@moinfra.me>",
+	"license": "MIT",
+	"type": "module"
+}

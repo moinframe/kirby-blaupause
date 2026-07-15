@@ -2,13 +2,8 @@
 
 use Kirby\Template\Snippet;
 use Kirby\Toolkit\V;
-use Kirby\Filesystem\F;
 use Kirby\Toolkit\Str;
 use Kirby\Toolkit\Dom;
-
-F::loadClasses([
-	'femundfilou\\menu\\menu' => 'lib/Menu.php'
-], __DIR__);
 
 /**
  * Returns the icon snippet
@@ -21,7 +16,7 @@ function icon(string $name, string $size = '1em')
 	return snippet('icon', ['name' => $name, 'size' => $size], true);
 }
 
-Kirby\Cms\App::plugin('femundfilou/blaupause-helper', [
+Kirby\Cms\App::plugin('project/helper', [
 	'fieldMethods' => [
 		'convertShy' => function (Kirby\Content\Field $field) {
 			return Str::replace($field, '&amp;', '&');
@@ -149,4 +144,4 @@ Kirby\Cms\App::plugin('femundfilou/blaupause-helper', [
 			return $this;
 		},
 	]
-]);
+], version: '1.0.0', info: ['license' => 'MIT']);

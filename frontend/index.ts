@@ -1,6 +1,6 @@
 import "./index.css";
 import DebugService from "./services/DebugService";
-import.meta.glob(["./assets/**", "!./assets/svg/**"])
+import "./assets/panel/favicon.svg";
 
 /**
  * Installs modules from the './lib' directory

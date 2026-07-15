@@ -12,8 +12,8 @@ const argv = yargs(process.argv.slice(2))
 	.demandOption(["i", "o"])
 	.describe("i", "Input path to folder containing .svg, e.g. src/svg/")
 	.describe("o", "Output path of sprite, e.g. public/sprite.svg")
-	.describe("p", "Project abbreviation, e.g. femundfilou")
-	.default("p", "femundfilou")
+	.describe("p", "Project abbreviation, e.g. project")
+	.default("p", "project")
 	.help().argv
 
 async function createSvgSprite(inputPath, outputPath, projectAbbreviation) {

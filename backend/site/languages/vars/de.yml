@@ -33,6 +33,7 @@ panel.page.template.home.label: Startseite
 panel.tabs.content.label: Inhalte
 panel.tabs.files.label: Dateien
 panel.tabs.subpages.label: Unterseiten
+panel.tabs.seo.label: SEO
 
 # Sections
 panel.sections.images.label: Bilder
@@ -56,6 +57,13 @@ panel.fields.alignment.label: Ausrichtung
 panel.fields.alignment.options.left.text: Linksbündig
 panel.fields.alignment.options.center.text: Zentriert
 panel.fields.alignment.options.right.text: Rechtsbündig
+panel.fields.metaTitle.label: Meta Title
+panel.fields.metaTitle.help: Die empfohlene Länge beträgt 60-70 Zeichen.
+panel.fields.metaDescription.label: Meta Description
+panel.fields.metaDescription.help: Die empfohlene Länge beträgt 155-160 Zeichen.
+panel.fields.metaRobots.label: Robots
+panel.fields.ogImage.label: OG Image
+panel.fields.ogImage.help: Das Bild wird auf 1200x630 verkleinert.
 
 # Fieldsets
 panel.fieldsets.heroes.label: Heroes

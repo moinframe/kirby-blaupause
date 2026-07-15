@@ -13,7 +13,6 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<?php snippet('seo/head'); ?>
-	<?php snippet('plausible') ?>
 	<?= vite(['frontend/index.ts']) ?>
 </head>
 
@@ -34,7 +33,7 @@
 	</div>
 	<?php snippet('seo/schemas'); ?>
 	<script>
-		console.info('%cv<?= option('version') ?> | developed by femundfilou.de', 'font-size: 12px; font-weight: bold; color: #025BFF; margin: 8px 0;')
+		console.info('%cv<?= option('version') ?> | developed by gutekombi.de', 'font-size: 12px; font-weight: bold; color: #6430F2; margin: 8px 0;')
 	</script>
 
 </body>

@@ -16,4 +16,4 @@ tabs:
           main:
             extends: fields/layouts
   files: tabs/files
-  seo: seo/page
+  seo: tabs/seo/page

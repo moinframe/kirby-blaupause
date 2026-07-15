@@ -16,6 +16,7 @@ fields:
     width: 1/2
     grow: false
     default: top
+    labels: false
     options:
       top:
         icon: align-top

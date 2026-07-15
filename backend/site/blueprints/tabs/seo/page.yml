@@ -1,0 +1,40 @@
+label: panel.tabs.seo.label
+icon: search
+columns:
+  first:
+    width: 2/3
+    sections:
+      fieldssection:
+        type: fields
+        fields:
+          metaTitle:
+            label: panel.fields.metaTitle.label
+            type: text
+            help: panel.fields.metaTitle.help
+          metaDescription:
+            label: panel.fields.metaDescription.label
+            type: textarea
+            buttons: false
+            help: panel.fields.metaDescription.help
+          metaRobots:
+            label: panel.fields.metaRobots.label
+            type: select
+            options:
+              "index,follow": Indexierung erlauben (index + follow)
+              "noindex,nofollow": Indexierung verbieten (noindex + nofollow)
+            default: index
+          ogImage:
+            extends: fields/image
+            label: panel.fields.ogImage.label
+            help: panel.fields.ogImage.help
+  second:
+    width: 1/3
+    sections:
+      serp-preview:
+        type: serp-preview
+        siteTitle: "{{ site.title.value }}"
+        siteUrl: "{{ kirby.url }}"
+        titleContentKey: metaTitle
+        defaultTitle: "{{ page.title.value }} - {{ site.title.value }}"
+        descriptionContentKey: metaDescription
+        defaultDescription: "{{ page.main.toBlocks.excerpt(150) }}"

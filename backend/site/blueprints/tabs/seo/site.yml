@@ -1,0 +1,20 @@
+extends: tabs/seo/page
+columns:
+  first:
+    sections:
+      fieldssection:
+        fields:
+          ogImage:
+            uploads:
+              parent: site.mediaPage
+            query: site.mediaPage.files.filterBy('template', 'image')
+  second:
+    sections:
+      serp-preview:
+        type: serp-preview
+        siteTitle: "{{ site.title.value }}"
+        siteUrl: "{{ kirby.url }}"
+        titleContentKey: metaTitle
+        defaultTitle: "{{ site.title.value }}"
+        descriptionContentKey: metaDescription
+        defaultDescription: "{{ site.metaDescription.value }}"

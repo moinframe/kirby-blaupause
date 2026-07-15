@@ -1,6 +1,6 @@
 import Button from "./components/Button.vue";
 
-window.panel.plugin("femundfilou/blaupause-block-previews", {
+window.panel.plugin("project/panel", {
   blocks: {
     button: Button,
   },

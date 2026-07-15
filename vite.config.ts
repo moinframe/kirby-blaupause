@@ -35,6 +35,7 @@ export default defineConfig(({ mode }) => {
 				input: [
 					'frontend/index.ts',
 					'frontend/panel.css',
+					'frontend/panel.ts',
 					...globSync('frontend/styles/blocks/**/!(_*).css'), // Add all CSS files in blocks folder, excluding those starting with '_'
 					...globSync('frontend/styles/snippets/**/!(_*).css'),
 					...globSync('frontend/blocks/**/!(_*).ts'), // Add all ts files in blocks folder, excluding those starting with '_'
