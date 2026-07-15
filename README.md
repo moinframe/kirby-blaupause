@@ -13,6 +13,10 @@ Modules in `frontend/lib` are installed automatically on page load if they expor
 - `lenis.off.ts` — smooth scrolling via [lenis](https://lenis.darkroom.engineering)
 - `htmx.off.ts` — [htmx](https://htmx.org) integration
 - `webVitals.off.ts` — reports Core Web Vitals to Plausible as custom events
+- `themeToggle.off.ts` — light/dark switch for elements with a `data-theme-toggle` attribute, persisted to localStorage
+
+### Theming
+Colors are defined with [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark) — cleacss ships all neutral tokens that way, project tokens live in `frontend/styles/variables/_colors.css`. The active scheme is controlled by `data-theme` on `<html>`, set via the Kirby option `project.theme`: `light` (default), `dark`, or `auto` to follow the OS preference. Use semantic tokens (`--color-base`, `--color-base-background`) instead of literal colors so components work in both schemes.
 
 ## Preinstalled plugins
 - distantnative/retour-for-kirby

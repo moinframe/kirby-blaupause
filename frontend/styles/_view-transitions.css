@@ -8,6 +8,6 @@
 /* Simple crossfade between pages */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-	animation-duration: .3s;
+	animation-duration: 0.3s;
 	animation-timing-function: var(--ease-out);
 }

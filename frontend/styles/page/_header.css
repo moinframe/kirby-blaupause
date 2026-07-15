@@ -23,10 +23,10 @@
 				--_background: var(--color-base-background);
 				position: fixed;
 				transform: translateY(-100%);
-				color: var(--color-black);
+				color: var(--color-base);
 
 				a {
-					color: var(--color-black);
+					color: var(--color-base);
 				}
 			}
 		}
@@ -47,7 +47,7 @@
 
 	& nav {
 		.submenu a {
-			color: var(--color-black);
+			color: var(--color-base);
 		}
 
 		li {
@@ -95,8 +95,8 @@
 			bottom: 0;
 			right: 0;
 			width: 100%;
-			background-color: var(--color-white);
-			color: var(--color-black);
+			background-color: var(--color-base-background);
+			color: var(--color-base);
 			transform: translate(0, 120%);
 			opacity: 0;
 			visibility: hidden;
@@ -112,7 +112,7 @@
 			}
 
 			a {
-				color: var(--color-black);
+				color: var(--color-base);
 			}
 
 			ul {

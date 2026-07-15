@@ -1,4 +1,4 @@
-import getURLParameter from "../composables/getURLParameter"
+import getURLParameter from "../utils/getURLParameter"
 import DebugService from "../services/DebugService"
 
 export const install = () => {
