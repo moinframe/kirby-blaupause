@@ -70,8 +70,8 @@ function setServerConfig() {
 		strictPort: true,
 	}
 
-	const keyPath = resolve(homedir(), `.config/valet/Certificates/${host}.key`)
-	const certificatePath = resolve(homedir(), `.config/valet/Certificates/${host}.crt`)
+	const keyPath = resolve(homedir(), `Library/Application Support/Herd/config/valet/Certificates/${host}.key`)
+	const certificatePath = resolve(homedir(), `Library/Application Support/Herd/config/valet/Certificates/${host}.crt`)
 
 	if (!fs.existsSync(keyPath)) {
 		return baseConfig
