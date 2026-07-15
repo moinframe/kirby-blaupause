@@ -11,10 +11,19 @@ export default class extends Renderer {
 	}
 
 	onEnter(): void {
-		// Update template dataset
 		const page = this.page as Document
+
+		// Update template dataset
 		const newTemplate = page.body.dataset.template
 		document.body.dataset.template = newTemplate
+
+		// Update canonical URL
+		const canonical = page.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
+		const currentCanonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
+		if (canonical && currentCanonical) {
+			currentCanonical.href = canonical.href
+		}
+
 	}
 
 	onLeaveCompleted(): void {
