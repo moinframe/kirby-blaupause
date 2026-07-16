@@ -61,28 +61,10 @@ SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
 # | Security Headers                                                   |
 # ----------------------------------------------------------------------
 
+# Browser security headers (CSP, HSTS, etc.) are managed by the
+# project-headers plugin: backend/site/plugins/project-headers
+
 <IfModule mod_headers.c>
-    # Protect against XSS attacks
-    Header set X-XSS-Protection "1; mode=block"
-
-    # Prevent clickjacking
-    Header set X-Frame-Options "SAMEORIGIN"
-
-    # Prevent MIME-type sniffing
-    Header set X-Content-Type-Options "nosniff"
-
-    # Force HTTPS
-    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-
-    # Control referrer information
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
-
-    # Restrict browser features
-    Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
-
-    # Content Security Policy
-    Header set Content-Security-Policy "default-src 'self'; font-src 'self' data:; img-src * data:; script-src * data: blob: 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-
     # Serve files as plain text if content type is unknown (security measure)
     Header set Content-Type "text/plain" "expr=-z %{CONTENT_TYPE}"
 

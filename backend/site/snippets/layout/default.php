@@ -42,7 +42,7 @@
 	<!-- Analytics -->
 	<?php if (option('project.plausible.enabled')): ?>
 		<script async src="<?= option('project.plausible.script') ?>"></script>
-		<script>
+		<script nonce="<?= $kirby->nonce() ?>">
 			window.plausible = window.plausible || function() {
 				(plausible.q = plausible.q || []).push(arguments)
 			}, plausible.init = plausible.init || function(i) {
@@ -59,7 +59,7 @@
 	<meta name="apple-mobile-web-app-title" content="<?= $site->title() ?>" />
 	<link rel="manifest" href="<?= $kirby->url() ?>/site.webmanifest" />
 	<!-- Prerender pages on link hover -->
-	<script type="speculationrules">
+	<script type="speculationrules" nonce="<?= $kirby->nonce() ?>">
 		{
 			"prerender": [{
 				"where": {
@@ -87,7 +87,7 @@
 
 		<?php snippet('page/footer'); ?>
 	</div>
-	<script>
+	<script nonce="<?= $kirby->nonce() ?>">
 		console.info('%cv<?= option('version') ?> | developed by gutekombi.de', 'font-size: 12px; font-weight: bold; color: #6430F2; margin: 8px 0;')
 	</script>
 
