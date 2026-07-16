@@ -8,6 +8,7 @@ $backend = dirname(__DIR__) . '/backend';
 require $backend . '/kirby/bootstrap.php';
 
 require_once $backend . '/site/plugins/kirby3-dotenv/global.php';
+
 loadenv([
 	'dir' => realpath(dirname(__DIR__)),
 	'file' => '.env',
