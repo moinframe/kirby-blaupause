@@ -1,5 +1,3 @@
-import fs from "node:fs"
-import { homedir } from "node:os"
 import { resolve } from "node:path"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
 import browserslist from "browserslist"
@@ -51,37 +49,5 @@ export default defineConfig(({ mode }) => {
 				"@": resolve(__dirname, "frontend/")
 			}
 		},
-		server: setServerConfig()
 	}
 })
-
-function setServerConfig() {
-	const host = "vite.test"
-	const baseConfig = {
-		open: false,
-		cors: true,
-		host,
-		hmr: { host },
-		port: 3000,
-		strictPort: true
-	}
-
-	const keyPath = resolve(homedir(), `Library/Application Support/Herd/config/valet/Certificates/${host}.key`)
-	const certificatePath = resolve(homedir(), `Library/Application Support/Herd/config/valet/Certificates/${host}.crt`)
-
-	if (!fs.existsSync(keyPath)) {
-		return baseConfig
-	}
-
-	if (!fs.existsSync(certificatePath)) {
-		return baseConfig
-	}
-
-	return {
-		...baseConfig,
-		https: {
-			key: fs.readFileSync(keyPath),
-			cert: fs.readFileSync(certificatePath)
-		}
-	}
-}
