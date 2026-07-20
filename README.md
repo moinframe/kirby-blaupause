@@ -53,6 +53,15 @@ The `frontend` is the last folder remaining and it's the home of all frontend so
 - Run `composer install` to install backend dependencies
 - Optional: You can run `kirby init` to get rid of some of the boilerplate code and naming conventions. The script will guide you through the steps. You have to install the [Kirby CLI](https://github.com/getkirby/cli) (globally) to use that command.
 
+## Testing the template
+When changing template internals you can dry-run a fresh project generation with `scripts/test-template.sh`. It copies the tracked working-tree files into a throwaway sandbox, then installs it from scratch (`composer install`, `pnpm install`, `pnpm build`), so you can verify the template generates and builds cleanly.
+
+- `scripts/test-template.sh` — generate + full install
+- `scripts/test-template.sh --init` — …then run `kirby init` in the sandbox
+- `scripts/test-template.sh --dir DIR` — use a custom sandbox path
+
+Each run creates a fresh sandbox under `.init-sandbox/` (gitignored); nothing is committed and nothing is deleted, so remove old runs yourself when done.
+
 ## License
 MIT
 

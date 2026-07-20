@@ -48,6 +48,6 @@ export default defineConfig(({ mode }) => {
 				"@styles": resolve(__dirname, "frontend/styles/"),
 				"@": resolve(__dirname, "frontend/")
 			}
-		},
+		}
 	}
 })

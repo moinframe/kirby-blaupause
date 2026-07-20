@@ -52,3 +52,7 @@ kirby
 # ---------------
 /storage/**/*
 !/storage/**/.gitkeep
+
+# template test sandbox (scripts/test-template.sh)
+# ---------------
+/.init-sandbox
