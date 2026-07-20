@@ -23,7 +23,7 @@
 	"author": "Justus Kraft <justus@moinfra.me>",
 	"license": "MIT",
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.3",
+		"@biomejs/biome": "^2.5.4",
 		"@release-it/bumper": "^7.0.6",
 		"@release-it/conventional-changelog": "^11.0.1",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
@@ -37,13 +37,13 @@
 		"lightningcss": "^1.32.0",
 		"purgecss": "^8.0.0",
 		"release-it": "^20.2.1",
-		"svelte": "^5.56.5",
-		"svelte-check": "^4.7.2",
+		"svelte": "^5.56.6",
+		"svelte-check": "^4.7.3",
 		"svgo": "^4.0.2",
 		"svgstore": "^3.0.1",
 		"tslib": "^2.8.1",
 		"typescript": "^7.0.2",
-		"vite": "^8.1.4",
+		"vite": "^8.1.5",
 		"yargs": "^18.0.0"
 	},
 	"dependencies": {
@@ -61,5 +61,5 @@
 		"not op_mini all",
 		"not and_uc > 0"
 	],
-	"packageManager": "pnpm@11.13.0"
+	"packageManager": "pnpm@11.15.0"
 }
