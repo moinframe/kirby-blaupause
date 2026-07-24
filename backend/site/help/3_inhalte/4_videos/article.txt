@@ -1,0 +1,42 @@
+Title: Videos
+
+----
+
+Icon: video
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Mit dem **Video-Block** bindest du Videos ein – entweder von einer Plattform wie YouTube oder als selbst hochgelegte Datei.
+
+## Externes Video (YouTube / Vimeo)
+
+Das ist der Normalfall. Lass die Option **Extern** aktiviert und füg einfach die **URL** des Videos ein, z. B. den YouTube-Link. Mehr braucht es nicht.
+
+**Datenschutz-Hinweis:** Bei externen Videos zeigt die Website zuerst einen Hinweis an. Erst wenn die Besucher:innen auf **Akzeptieren** klicken, wird das Video von YouTube bzw. Vimeo geladen. So bleibt die Seite datenschutzfreundlich.
+
+## Selbst hochgeladenes Video
+
+Schalte die Option **Extern** aus, wenn du eine eigene Videodatei nutzen willst. Dann kannst du:
+
+- eine oder mehrere **Quellen** (Videodateien) hochladen
+- ein **Poster** festlegen – das Vorschaubild, bevor das Video startet
+- **Loop** aktivieren, damit das Video in Endlosschleife läuft
+
+## Weitere Einstellungen
+
+- **Bildunterschrift** – kurzer Text unter dem Video
+- **Seitenverhältnis** & **Zuschneiden** – meist passt 16:9
+
+## Tipp
+
+Eigene Videodateien können sehr groß sein und die Seite verlangsamen. Für längere Videos ist YouTube oder Vimeo (also die externe Variante) fast immer die bessere Wahl.

@@ -1,0 +1,56 @@
+Title: Layouts & Blöcke
+
+----
+
+Icon: layout-columns
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Das ist das Herzstück der Bearbeitung. Der eigentliche Inhalt einer Seite entsteht im Reiter **Inhalte** – aus **Layouts** (dem groben Raster) und **Blöcken** (den einzelnen Inhalts-Elementen darin).
+
+## Layouts: das Raster
+
+Ein **Layout** ist ein waagerechter Abschnitt der Seite. Du kannst beliebig viele untereinander stapeln. Ein neues Layout fügst du hinzu und wählst dann seine Spaltenaufteilung:
+
+- **Volle Breite** – eine durchgehende Spalte
+- **Zwei Spalten** – Inhalt nebeneinander, z. B. Text und Bild
+- **Drei Spalten** – für drei gleich breite Elemente
+
+Über den Reiter **Ausrichtung** (innerhalb eines Layouts) steuerst du zusätzlich:
+
+- **Breite** – Standard oder volle Breite
+- **Abstand oben / unten** – Kein, Klein, Mittel oder Groß
+- **Vertikale Ausrichtung** der Spalten und, bei mehreren Spalten, das **Umkehren der Spaltenreihenfolge**
+
+## Blöcke: die Inhalte
+
+Innerhalb eines Layouts fügst du **Blöcke** ein – die einzelnen Bausteine. Klick dazu in eine Spalte auf:
+
+<k-button icon="add">Hinzufügen</k-button>
+
+Die Blöcke sind in Gruppen sortiert:
+
+- **Text** – Überschrift, Text, Liste, Zitat, Abstand
+- **Links** – Button, Sprungmarke
+- **Medien** – Bild, Video
+
+## Blöcke bearbeiten
+
+Fährst du mit der Maus über einen Block, erscheinen kleine Werkzeuge:
+
+- **Ziehen** <k-icon name="sort" alt="Verschieben" /> – Block verschieben
+- **Bearbeiten** <k-icon name="edit" alt="Bearbeiten" /> – Inhalt ändern
+- **Duplizieren** <k-icon name="copy" alt="Duplizieren" /> – Kopie anlegen
+- **Löschen** <k-icon name="trash" alt="Löschen" /> – Block entfernen
+
+Die einzelnen Block-Typen erklären wir in den nächsten Themen genauer. Vergiss am Ende nicht das **Speichern**.

@@ -1,0 +1,38 @@
+Title: Header & Footer
+
+----
+
+Icon: header-footer
+
+----
+
+Color: orange-600
+
+----
+
+Back: orange-200
+
+----
+
+Text:
+
+Welche Seiten oben im **Menü (Header)** und unten im **Footer** erscheinen, legst du zentral fest – nicht auf den einzelnen Seiten.
+
+## Wo finde ich das?
+
+Öffne die **Website-Einstellungen** (Menüpunkt **Dashboard**, dann die oberste Ebene) und wechsle zum Reiter **Header & Footer**. Dort gibt es zwei Felder:
+
+- **Hauptnavigation** – die Links im oberen Menü
+- **Footer-Navigation** – die Links im Fußbereich
+
+## Menüpunkte pflegen
+
+Beide Felder funktionieren gleich. Klick auf:
+
+<k-button icon="add">Hinzufügen</k-button>
+
+und wähl die gewünschte Seite aus. Zum Umsortieren ziehst du die Einträge per Anfasser <k-icon name="sort" alt="Sortieren" /> in die richtige Reihenfolge. Zum Entfernen nutzt du das <k-icon name="trash" alt="Entfernen" /> Symbol – die Seite selbst bleibt dabei bestehen, sie verschwindet nur aus dem Menü.
+
+## Zusammenspiel mit dem Seitenstatus
+
+Damit eine Seite im Menü auftaucht, muss sie **veröffentlicht** sein. Setzt du eine Seite auf **„Veröffentlicht & im Menü"**, kann sie zusätzlich automatisch berücksichtigt werden. Über die Felder hier bestimmst du die genaue Auswahl und Reihenfolge selbst. Mehr dazu unter **Seitenstatus**.

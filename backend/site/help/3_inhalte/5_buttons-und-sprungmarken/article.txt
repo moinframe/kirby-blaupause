@@ -1,0 +1,47 @@
+Title: Buttons & Sprungmarken
+
+----
+
+Icon: url
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Mit **Buttons** führst du Besucher:innen gezielt zu einer Aktion. **Sprungmarken** helfen, innerhalb einer langen Seite direkt zu einem Abschnitt zu springen.
+
+## Button-Block
+
+Ein Button ist ein auffälliger, klickbarer Knopf. Du legst fest:
+
+- **Text** – die Beschriftung, z. B. „Jetzt Kontakt aufnehmen"
+- **Link** – das Ziel. Möglich sind:
+  - eine **Seite** deiner Website
+  - eine **externe Web-Adresse**
+  - eine **Datei** (z. B. ein PDF zum Download)
+  - eine **E-Mail-Adresse** oder Telefonnummer
+- **Stil** – als richtiger **Button** oder dezenter als **Text-Link**
+- **Ausrichtung** – links, zentriert oder rechts
+
+So sieht ein Button im Panel-Stil aus:
+
+<k-button icon="url" theme="positive">Jetzt Kontakt aufnehmen</k-button>
+
+## Sprungmarken
+
+Eine **Sprungmarke** ist ein unsichtbarer Ankerpunkt auf der Seite. Damit kannst du z. B. von einem Button oben direkt zu einem Abschnitt weiter unten springen.
+
+So funktioniert's:
+
+1. Füg an der Zielstelle einen **Sprungmarke**-Block ein und gib ihm einen Namen, z. B. `#kontakt`.
+2. Setz an anderer Stelle einen **Button** und trag als Ziel dieselbe Sprungmarke ein: `#kontakt`.
+
+Ein Klick auf den Button scrollt dann sanft zum passenden Abschnitt.

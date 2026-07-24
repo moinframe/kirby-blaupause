@@ -1,0 +1,36 @@
+Title: SEO
+
+----
+
+Icon: search
+
+----
+
+Color: pink-600
+
+----
+
+Back: pink-200
+
+----
+
+Text:
+
+**SEO** steht für Suchmaschinenoptimierung. Im Reiter **SEO** jeder Seite legst du fest, wie deine Seite bei Google und beim Teilen in sozialen Netzwerken erscheint.
+
+## Die Felder
+
+- **Meta Title** – der Titel, der bei Google als blaue Überschrift steht. Empfohlen sind **60–70 Zeichen**. Lässt du ihn leer, wird automatisch der Seitentitel verwendet.
+- **Meta Description** – der kurze Beschreibungstext unter dem Titel bei Google. Empfohlen sind **155–160 Zeichen**. Formuliere ihn wie eine kleine Einladung zum Klicken.
+- **Robots** – normalerweise **„Indexierung erlauben"**. Nur wenn eine Seite bewusst **nicht** bei Google auftauchen soll (z. B. Danke-Seiten), wählst du „Indexierung verbieten".
+- **OG Image** – das Vorschaubild, das erscheint, wenn jemand deine Seite bei Facebook, LinkedIn oder WhatsApp teilt. Es wird automatisch auf **1200×630 Pixel** gebracht.
+
+## Die SERP-Vorschau
+
+Rechts neben den Feldern siehst du eine **Vorschau**, die einen Google-Treffer nachbildet. Während du tippst, aktualisiert sie sich live. So erkennst du sofort, ob dein Titel abgeschnitten wird oder die Beschreibung gut klingt.
+
+## Faustregeln
+
+- Jede Seite verdient einen **eigenen, treffenden** Titel und Beschreibungstext.
+- Verwende die wichtigsten Suchbegriffe **natürlich** im Text – kein Stichwort-Stapeln.
+- Fehlt ein Feld, greift ein sinnvoller Standardwert – trag die wichtigen Seiten aber am besten selbst ein.

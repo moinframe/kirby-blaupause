@@ -1,0 +1,36 @@
+Title: Hero
+
+----
+
+Icon: star
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Der **Hero** ist der große, auffällige Bereich ganz oben auf einer Seite – das Erste, was Besucher:innen sehen. Er sitzt über den normalen Inhalten und gibt der Seite ihren „Aufmacher".
+
+## Hero pflegen
+
+Das **Hero**-Feld findest du im Reiter **Inhalte**, oberhalb der Layouts. Klick auf:
+
+<k-button icon="add">Hinzufügen</k-button>
+
+Pro Seite ist **genau ein** Hero möglich. Trag die **Überschrift** ein – die zentrale Aussage, die groß dargestellt wird.
+
+## Wann sinnvoll?
+
+- Auf der **Startseite** und wichtigen Unterseiten lohnt sich ein Hero als starker Einstieg.
+- Bei sehr sachlichen oder kurzen Seiten kannst du ihn auch weglassen – dann beginnt die Seite direkt mit den Inhalten.
+
+## Entfernen
+
+Willst du den Hero wieder loswerden, fährst du mit der Maus darüber und klickst auf **Löschen** <k-icon name="trash" alt="Löschen" />. Danach nicht das **Speichern** vergessen.

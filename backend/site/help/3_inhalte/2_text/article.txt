@@ -1,0 +1,50 @@
+Title: Text, Überschriften & Listen
+
+----
+
+Icon: text
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Für geschriebene Inhalte gibt es mehrere Block-Typen. Hier ein Überblick, wann du welchen nimmst.
+
+## Text-Block
+
+Der Standard für Fließtext. Du kannst einzelne Wörter markieren und formatieren:
+
+- **Fett** für Betonungen
+- **Link** zu einer anderen Seite oder Website
+- **E-Mail** als klickbare Adresse
+
+Über den **Stil** legst du die Textgröße fest: Klein, Normal oder Groß. Zusätzlich lässt sich der Text linksbündig, zentriert oder rechtsbündig **ausrichten**.
+
+## Überschrift-Block
+
+Für Zwischenüberschriften. Wähl die **Ebene** von H1 bis H6:
+
+- **H1** ist die Hauptüberschrift – **nur einmal pro Seite** verwenden.
+- **H2** für Hauptabschnitte, **H3** für Unterpunkte darunter, usw.
+
+Halte die Reihenfolge logisch (erst H2, dann H3) – das hilft der Lesbarkeit und Google.
+
+## Listen-Block
+
+Für Aufzählungen mit Punkten. Neue Zeile = neuer Listenpunkt. Auch hier kannst du die Größe über den **Stil** anpassen.
+
+## Zitat-Block
+
+Für hervorgehobene Zitate oder Kernaussagen.
+
+## Abstand-Block
+
+Fügt zusätzlichen Leerraum zwischen Elementen ein. Über den Regler **Höhe** (1 bis 7) bestimmst du, wie groß der Abstand ausfällt – praktisch, um Inhalte „atmen" zu lassen.

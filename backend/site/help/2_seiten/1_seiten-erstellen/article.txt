@@ -1,0 +1,41 @@
+Title: Seiten erstellen
+
+----
+
+Icon: add
+
+----
+
+Color: purple-600
+
+----
+
+Back: purple-200
+
+----
+
+Text:
+
+Jede Unterseite deiner Website – zum Beispiel „Über uns" oder „Kontakt" – ist im Panel eine eigene **Seite**. So legst du eine neue an.
+
+## Neue Seite anlegen
+
+Auf dem **Dashboard** siehst du oben deine veröffentlichten Seiten und darunter die Entwürfe. Um eine neue Seite zu erstellen, klickst du auf:
+
+<k-button icon="add">Hinzufügen</k-button>
+
+Dann gibst du einen **Titel** ein und wählst eine **Vorlage**:
+
+- **Standard-Seite** – eine normale Seite auf oberster Ebene
+- **Unterseite** – eine Seite, die unter einer anderen Seite liegt
+
+## Vorlage wählen
+
+Die Vorlage bestimmt, welche Bearbeitungsmöglichkeiten eine Seite hat. Für die meisten Inhalte ist die **Standard-Seite** richtig.
+
+**Unterseiten** legst du an, indem du zuerst die übergeordnete Seite öffnest und dort im Reiter **Unterseiten** eine neue hinzufügst. So entsteht eine saubere Struktur, z. B. „Leistungen → Beratung".
+
+## Gut zu wissen
+
+- Eine neue Seite ist zuerst ein **Entwurf** und noch nicht öffentlich. Wie du sie veröffentlichst, steht unter **Seitenstatus**.
+- Die **Startseite** ist fest angelegt – die musst (und kannst) du nicht neu erstellen, sondern nur bearbeiten.

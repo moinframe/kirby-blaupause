@@ -1,0 +1,45 @@
+Title: Bilder & Dateien
+
+----
+
+Icon: images
+
+----
+
+Color: aqua-600
+
+----
+
+Back: aqua-200
+
+----
+
+Text:
+
+Bilder, Videos und Dokumente (z. B. PDFs) verwaltest du als **Dateien**. Es gibt zwei Orte dafür: bei der jeweiligen Seite oder zentral unter **Media**.
+
+## Dateien einer Seite
+
+Öffne eine Seite und wechsle zum Reiter **Dateien**. Dort findest du getrennte Listen für **Bilder**, **Videos** und sonstige **Dateien**, jeweils mit Suche.
+
+Hochladen ist einfach: Zieh die Datei per **Drag & Drop** in die Liste oder klick auf:
+
+<k-button icon="upload">Hochladen</k-button>
+
+## Alt-Text & Copyright pflegen
+
+Klick auf eine hochgeladene Datei, um ihre Angaben zu ergänzen:
+
+- **Alt-Text** – kurze Bildbeschreibung (wichtig für Barrierefreiheit und Google)
+- **Copyright** – wem das Bild gehört bzw. die Bildquelle
+
+Das kostet wenig Zeit und macht die Website professioneller und rechtlich sauberer.
+
+## Seitendateien oder globale Medien?
+
+- **Bei der Seite ablegen**, wenn eine Datei nur zu dieser einen Seite gehört (z. B. ein Team-Foto auf „Über uns").
+- **Media** (im Hauptmenü) nutzen für Dateien, die du **an mehreren Stellen** brauchst, etwa das Logo oder wiederkehrende Grafiken. So musst du sie nur einmal pflegen.
+
+## Tipp
+
+Gib Dateien vor dem Hochladen sprechende Namen (`preisliste-2026.pdf` statt `dok1.pdf`). Das erleichtert das Wiederfinden und sieht in Download-Links besser aus.

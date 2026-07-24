@@ -1,0 +1,44 @@
+Title: Bilder
+
+----
+
+Icon: image
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Mit dem **Bild-Block** fügst du Fotos und Grafiken in deine Inhalte ein.
+
+## Bild auswählen
+
+Nach dem Einfügen wählst du die **Quelle**:
+
+- **Intern** – ein Bild aus den Dateien der Seite. Du kannst hier auch direkt neue Bilder **hochladen**.
+- **Extern** – ein Bild von einer Web-Adresse (URL).
+
+Für die meisten Fälle ist **Intern** die richtige Wahl.
+
+## Der Alt-Text ist wichtig
+
+Trag immer einen **Alt-Text** ein – eine kurze Beschreibung dessen, was auf dem Bild zu sehen ist. Er wird von Screenreadern vorgelesen und von Google gelesen. Beispiel: „Zwei Personen an einem Schreibtisch im Gespräch".
+
+## Weitere Einstellungen
+
+- **Bildunterschrift** – ein kurzer Text, der unter dem Bild angezeigt wird
+- **Verlinkung** – macht das Bild klickbar (z. B. zu einer anderen Seite)
+- **Seitenverhältnis** & **Zuschneiden** – z. B. 16:9 oder 1:1; mit „Zuschneiden" wird das Bild passend beschnitten statt verzerrt
+- **Max. Breite** – begrenzt, wie groß das Bild maximal dargestellt wird
+- **Ausrichtung** – links, zentriert oder rechts
+
+## Tipp
+
+Verwende möglichst schon vor dem Hochladen sinnvoll benannte Dateien (z. B. `team-beratung.jpg` statt `IMG_2831.jpg`). Sehr große Fotos musst du nicht selbst verkleinern – die Website optimiert Bilder automatisch fürs Web.

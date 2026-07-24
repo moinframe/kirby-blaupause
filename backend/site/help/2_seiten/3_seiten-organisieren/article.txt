@@ -1,0 +1,41 @@
+Title: Seiten organisieren
+
+----
+
+Icon: sort
+
+----
+
+Color: purple-600
+
+----
+
+Back: purple-200
+
+----
+
+Text:
+
+Mit der Zeit sammeln sich einige Seiten an. So behältst du den Überblick und bringst sie in die richtige Reihenfolge.
+
+## Reihenfolge ändern
+
+In der Seitenliste kannst du Seiten per **Ziehen** (Drag & Drop) neu anordnen. Fahr mit der Maus über eine Seite, greif sie am Anfasser <k-icon name="sort" alt="Sortieren" /> und zieh sie an die gewünschte Stelle. Die Reihenfolge im Menü richtet sich danach.
+
+## Umbenennen und Adresse ändern
+
+Öffne eine Seite und klick oben auf den <k-icon name="settings" alt="Einstellungen" /> Einstellungen-Button. Dort kannst du:
+
+- den **Titel** ändern (die Überschrift der Seite)
+- die **URL/Adresse** (den „Slug") anpassen
+
+Achtung: Änderst du die Adresse einer bereits veröffentlichten Seite, ändert sich auch ihr Link. Alte Lesezeichen und Google-Treffer führen dann ins Leere. In diesem Fall hilft eine **Weiterleitung** (siehe „Weitere Werkzeuge").
+
+## Duplizieren und Löschen
+
+Über denselben <k-icon name="settings" alt="Einstellungen" /> Button findest du auch:
+
+<k-button icon="copy">Duplizieren</k-button>
+<k-button icon="trash" theme="negative">Löschen</k-button>
+
+**Duplizieren** erstellt eine Kopie – praktisch als Vorlage für ähnliche Seiten. **Löschen** entfernt die Seite endgültig. Gelöschte Seiten lassen sich nicht wiederherstellen – lösch also nur, wenn du sicher bist.

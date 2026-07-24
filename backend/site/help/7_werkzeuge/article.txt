@@ -1,0 +1,42 @@
+Title: Weitere Werkzeuge
+
+----
+
+Icon: wand
+
+----
+
+Color: yellow-600
+
+----
+
+Back: yellow-200
+
+----
+
+Text:
+
+Neben dem eigentlichen Bearbeiten gibt es ein paar praktische Helfer. Die meisten findest du als Buttons oben rechts auf einer Seite.
+
+## Vorschau & Öffnen
+
+<k-button icon="preview">Vorschau</k-button>
+<k-button icon="open">Öffnen</k-button>
+
+Mit **Öffnen** rufst du die Seite so auf, wie deine Besucher:innen sie sehen – ideal, um Änderungen nach dem Speichern zu kontrollieren.
+
+## Typo-and-Paste
+
+Wenn du Text aus Word, einer E-Mail oder einer Website kopierst, schleppst du oft unsichtbare Formatierungen mit. Das **Typo-and-Paste**-Werkzeug fügt Text **sauber** ein und setzt typografisch korrekte Zeichen (z. B. „richtige" Anführungszeichen und Gedankenstriche). So bleibt dein Inhalt einheitlich und ordentlich.
+
+## Barrierefreiheits-Check
+
+Der **Barrierefreiheits-Check** prüft deine Seite auf typische Hürden – etwa fehlende Alt-Texte bei Bildern oder zu geringe Kontraste. Er hilft dir, die Website für **alle** Menschen gut nutzbar zu machen. Arbeite die Hinweise nach und nach ab.
+
+## Weiterleitungen
+
+Den Punkt **Weiterleitungen** findest du im Hauptmenü. Er ist wichtig, wenn sich die **Adresse** einer Seite geändert hat oder eine Seite gelöscht wurde: Eine Weiterleitung schickt Besucher:innen automatisch von der alten auf die neue Adresse – so landet niemand auf einer Fehlerseite und Google-Treffer bleiben gültig.
+
+## Tipp
+
+Du musst nicht alle Werkzeuge sofort beherrschen. Vorschau und Typo-and-Paste brauchst du im Alltag am häufigsten – der Rest ist für besondere Situationen da.

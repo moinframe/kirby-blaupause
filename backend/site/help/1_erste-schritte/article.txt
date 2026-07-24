@@ -1,0 +1,46 @@
+Title: Erste Schritte
+
+----
+
+Icon: book
+
+----
+
+Color: blue-600
+
+----
+
+Back: blue-200
+
+----
+
+Text:
+
+Willkommen! Diese Hilfe zeigt dir Schritt für Schritt, wie du deine Website selbst pflegst. Du brauchst dafür keine Technikkenntnisse – wenn du eine E-Mail schreiben kannst, kommst du auch hier zurecht.
+
+## Was ist das Panel?
+
+Das **Panel** ist der Verwaltungsbereich deiner Website. Hier bearbeitest du Texte, Bilder und Seiten. Alles, was du hier änderst, landet auf deiner öffentlichen Website – aber erst, nachdem du gespeichert hast (dazu gleich mehr).
+
+Angemeldet bleibst du automatisch. Zum Abmelden klickst du unten links auf deinen Namen und dann auf **Abmelden**.
+
+## Das Hauptmenü
+
+Am linken Rand findest du das Menü. Die wichtigsten Einträge:
+
+- **Dashboard** – der Startbildschirm mit allen Seiten deiner Website
+- **Media** – ein zentraler Ort für Bilder und Dateien, die du überall nutzen willst
+- **Weiterleitungen** – leitet alte Adressen auf neue um
+- **Benutzer**, **Sprachen**, **System** – Grundeinstellungen (brauchst du selten)
+
+## Bearbeiten und Speichern
+
+Das Wichtigste zuerst: Deine Änderungen werden **nicht automatisch** übernommen. Sobald du etwas änderst, erscheint oben rechts ein Speichern-Button.
+
+<k-button icon="check" theme="positive">Speichern</k-button>
+
+Erst ein Klick darauf macht deine Änderung live. Wenn du eine Seite verlässt, ohne zu speichern, fragt das Panel nach – so geht nichts verloren.
+
+## Und jetzt?
+
+Klick dich einfach durch die Hilfe-Themen. Am besten startest du mit **Seiten verwalten** und **Inhalte bearbeiten** – das brauchst du im Alltag am häufigsten.

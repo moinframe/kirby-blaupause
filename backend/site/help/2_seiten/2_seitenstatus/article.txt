@@ -1,0 +1,37 @@
+Title: Seitenstatus
+
+----
+
+Icon: preview
+
+----
+
+Color: purple-600
+
+----
+
+Back: purple-200
+
+----
+
+Text:
+
+Jede Seite hat einen **Status**. Er entscheidet, ob eine Seite öffentlich sichtbar ist und ob sie im Menü auftaucht. Den Status findest du unten links auf jeder Seite.
+
+## Die drei Status
+
+- **Entwurf** – Die Seite ist nur im Panel sichtbar, nicht öffentlich. Ideal, solange du noch an ihr arbeitest.
+- **Veröffentlicht** – Die Seite ist online und über ihre Adresse (URL) erreichbar, erscheint aber **nicht** automatisch im Menü.
+- **Veröffentlicht & im Menü** – Die Seite ist online und wird in der Navigation aufgeführt.
+
+## Status ändern
+
+Klick unten links auf den Status-Button und wähl den gewünschten Status aus.
+
+<k-button icon="preview">Status ändern</k-button>
+
+Am Farbpunkt erkennst du den aktuellen Status auf einen Blick: <k-icon name="circle" alt="" /> Grau steht für Entwurf, Blau und Grün für die veröffentlichten Zustände.
+
+## Tipp
+
+Neue Seiten sind bewusst zuerst **Entwurf**. Nimm dir Zeit für die Inhalte und stell erst dann auf „Veröffentlicht", wenn alles passt. Ob eine veröffentlichte Seite auch im Menü erscheint, steuerst du zusätzlich unter **Header & Footer**.
