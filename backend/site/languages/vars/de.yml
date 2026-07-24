@@ -13,20 +13,19 @@ privacy-overlay.button: Akzeptieren
 video.iframe.title: Video-Player
 
 # Panel
+panel.site.title: Website
 
 # Site Tabs
 panel.site.tabs.dashboard.label: Dashboard
 panel.site.tabs.headerfooter.label: Header & Footer
 
 # Site Sections
-panel.site.sections.mainmenu.label: Hauptnavigation
 panel.site.sections.pages.label: Veröffentlichte Seiten
 panel.site.sections.drafts.label: Entwürfe
 
 # Site Fields
 panel.site.fields.mainmenu.label: Hauptnavigation
 panel.site.fields.footermenu.label: Footer-Navigation
-panel.site.fields.privacypage.label: Datenschutz-Seite
 
 # Page
 panel.page.status.draft.label: Entwurf
@@ -73,6 +72,8 @@ panel.fields.metaTitle.help: Die empfohlene Länge beträgt 60-70 Zeichen.
 panel.fields.metaDescription.label: Meta Description
 panel.fields.metaDescription.help: Die empfohlene Länge beträgt 155-160 Zeichen.
 panel.fields.metaRobots.label: Robots
+panel.fields.metaRobots.options.index.text: Indexierung erlauben (index + follow)
+panel.fields.metaRobots.options.noindex.text: Indexierung verbieten (noindex + nofollow)
 panel.fields.ogImage.label: OG Image
 panel.fields.ogImage.help: Das Bild wird auf 1200x630 verkleinert.
 
@@ -81,7 +82,6 @@ panel.fieldsets.heroes.label: Heroes
 panel.fieldsets.links.label: Links
 panel.fieldsets.media.label: Medien
 panel.fieldsets.text.label: Text
-panel.fieldsets.matomo.label: Matomo Analytics
 
 # Files
 panel.files.default.label: Datei
@@ -95,11 +95,6 @@ panel.layouts.tabs.alignment.label: Ausrichtung
 panel.layouts.tabs.alignment.fields.width.label: Breite
 panel.layouts.tabs.alignment.fields.width.options.default: Standard
 panel.layouts.tabs.alignment.fields.width.options.full: Volle Breite
-panel.layouts.tabs.alignment.fields.textalign.label: Text-Ausrichtung
-panel.layouts.tabs.alignment.fields.textalign.options.left: Links
-panel.layouts.tabs.alignment.fields.textalign.options.center: Zentriert
-panel.layouts.tabs.alignment.fields.textalign.options.right: Rechts
-panel.layouts.tabs.alignment.fields.textalign.options.justify: Blocksatz
 panel.layouts.tabs.alignment.fields.verticalalign.label: Vertikale Ausrichtung
 panel.layouts.tabs.alignment.fields.verticalalign.options.top: Oben
 panel.layouts.tabs.alignment.fields.verticalalign.options.bottom: Unten
@@ -130,11 +125,13 @@ panel.layouts.three-columns.name: Dreispaltig
 panel.blocks.hero-default.name: Standard-Hero
 panel.blocks.hero-default.fields.heading.label: Seitentitel
 panel.blocks.image.fields.maxwidth.label: Maximale Breite
+panel.blocks.image.fields.ratio.placeholder: Auto
 panel.blocks.video.fields.external.label: Externes Video
 panel.blocks.video.fields.external.options.false: Nein
 panel.blocks.video.fields.external.options.true: Ja
 panel.blocks.video.fields.poster.label: Poster
 panel.blocks.video.fields.sources.label: Videos
+panel.blocks.video.fields.ratio.placeholder: Auto
 panel.blocks.video.fields.poster.help: Ein Poster wird verwendet, wenn das Video nicht geladen ist.
 panel.blocks.video.fields.loop.label: Loop
 panel.blocks.video.fields.loop.help: Das Video wird stummgeschaltet und in einer Endlosschleife abgespielt.
@@ -142,6 +139,8 @@ panel.blocks.video.fields.loop.options.false: Nein
 panel.blocks.video.fields.loop.options.true: Ja
 panel.blocks.button.name: Button
 panel.blocks.button.fields.style.label: Stil
+panel.blocks.button.fields.style.options.default.text: Standard
+panel.blocks.button.fields.style.options.text.text: Text
 panel.blocks.heading.fields.style.label: Stil
 panel.blocks.text.fields.style.label: Stil
 panel.blocks.text.fields.style.options.large.text: Größer
@@ -151,10 +150,6 @@ panel.blocks.list.fields.style.label: Stil
 panel.blocks.list.fields.style.options.large.text: Größer
 panel.blocks.list.fields.style.options.default.text: Normal
 panel.blocks.list.fields.style.options.small.text: Kleiner
-panel.blocks.matomo-optout.name: Matomo Opt-Out
-panel.blocks.matomo-optout.fields.blocks.label: Inhalt
-panel.blocks.matomo-optout.fields.optedinlabel.label: Label (Nutzer wird getracked)
-panel.blocks.matomo-optout.fields.optedoutlabel.label: Label (Nutzer wird nicht getracked)
 panel.blocks.jumpmark.name: Sprungmarke
 panel.blocks.jumpmark.fields.jumpmark.label: Identifikator
 panel.blocks.jumpmark.fields.jumpmark.help: Hier sollte ein für die Seite einzigartiger Name verwendet werden. Kleinschreibung und keine Leerzeichen.

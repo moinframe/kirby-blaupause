@@ -20,8 +20,10 @@ columns:
             label: panel.fields.metaRobots.label
             type: select
             options:
-              "index,follow": Indexierung erlauben (index + follow)
-              "noindex,nofollow": Indexierung verbieten (noindex + nofollow)
+              "index,follow":
+                *: panel.fields.metaRobots.options.index.text
+              "noindex,nofollow":
+                *: panel.fields.metaRobots.options.noindex.text
             default: index
           ogImage:
             extends: fields/image

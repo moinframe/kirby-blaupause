@@ -42,7 +42,7 @@ fields:
   ratio:
     label: field.blocks.image.ratio
     type: select
-    placeholder: Auto
+    placeholder: panel.blocks.image.fields.ratio.placeholder
     width: 1/2
     options:
       1/1: "1:1"

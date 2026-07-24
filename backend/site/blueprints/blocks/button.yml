@@ -13,6 +13,8 @@ fields:
     type: toggles
     default: default
     options:
-      default: Standard
-      text: Text
+      default:
+        *: panel.blocks.button.fields.style.options.default.text
+      text:
+        *: panel.blocks.button.fields.style.options.text.text
     required: true

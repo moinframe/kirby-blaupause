@@ -1,4 +1,4 @@
-title: Site
+title: panel.site.title
 tabs:
   dashboard:
     label: panel.site.tabs.dashboard.label
