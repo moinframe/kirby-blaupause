@@ -20,6 +20,7 @@ return [
 	...require __DIR__ . '/plugins/project.headers.php',
 	...require __DIR__ . '/plugins/project.sitemap.php',
 	...require __DIR__ . '/plugins/project.plausible.php',
+	...require __DIR__ . '/plugins/philippoehrlein.typo-and-paste.php',
 
 	// Routes
 	'routes' => require __DIR__ . '/routes/index.php',

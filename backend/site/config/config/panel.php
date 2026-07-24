@@ -14,10 +14,15 @@ return [
 				->separator()
 				->area('retour')
 				->separator()
+				->area('help')
 				->area('users')
 				->area('languages')
 				->area('system')
-				->toArray()
+				->toArray(),
+			'viewButtons' => [
+				'page' => ['typo-and-paste', 'accessibility-check', 'open', 'preview', 'settings', 'languages', 'status'],
+				'site' => ['typo-and-paste', 'open', 'preview', 'languages']
+			]
 		],
 	],
 ];

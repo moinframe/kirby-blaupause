@@ -23,7 +23,11 @@
 		"junohamburg/kirby-visual-block-selector": "^3.0",
 		"moinframe/kirby-panel-menu": "^1.0",
 		"johannschopplich/kirby-serp-preview": "^1.3",
-		"moinframe/kirby-image-snippet": "^2.0"
+		"moinframe/kirby-image-snippet": "^2.0",
+		"philippoehrlein/typo-and-paste": "^2.4",
+		"grommasdietz/kirby-hidden-characters": "^2.1",
+		"medienbaecker/kirby-help-view": "^1.3",
+		"moinframe/kirby-accessibility-check": "^1.1"
 	},
 	"minimum-stability": "beta",
 	"prefer-stable": true,

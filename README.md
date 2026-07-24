@@ -21,17 +21,17 @@ Colors are defined with [`light-dark()`](https://developer.mozilla.org/en-US/doc
 ## Preinstalled plugins
 - distantnative/retour-for-kirby
 - femundfilou/kirby-asset-manager
-- femundfilou/kirby-image-snippet
+- moinframe/kirby-image-snippet
 - getkirby/cli
 - getkirby/staticache
 - lukaskleinschmidt/kirby-laravel-vite
-- tobimori/kirby-seo
-- genxbe/kirby3-ray
 - johannschopplich/kirby-plausible
 - bnomei/kirby3-dotenv
 - timnarr/kirby-obfuscate-email
 - junohamburg/kirby-visual-block-selector
-
+- philippoehrlein/typo-and-paste
+- grommasdietz/kirby-hidden-characters
+- moinframe/kirby-accessibility-check
 
 ## Prebuild blocks
 This template comes with some prebuild blocks and block extensions.

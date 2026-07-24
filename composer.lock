@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12527dc04a8c9b302bced0b63fa003ed",
+    "content-hash": "939a122cda44b99f74386a72dc8175e7",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -881,6 +881,59 @@
             "time": "2025-12-27T19:43:20+00:00"
         },
         {
+            "name": "grommasdietz/kirby-hidden-characters",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/grommasdietz/kirby-hidden-characters.git",
+                "reference": "6eb94cd53f523c5642ffe8127410a9d2fcc373bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/grommasdietz/kirby-hidden-characters/zipball/6eb94cd53f523c5642ffe8127410a9d2fcc373bd",
+                "reference": "6eb94cd53f523c5642ffe8127410a9d2fcc373bd",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.93",
+                "getkirby/cms": "^5.2",
+                "phpunit/phpunit": "^12.5",
+                "vimeo/psalm": "^6.15"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grommas Dietz",
+                    "email": "info@grommas-dietz.com",
+                    "homepage": "https://grommas-dietz.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Kirby CMS plugin for visualising hidden characters in the Panel",
+            "keywords": [
+                "hidden-characters",
+                "kirby",
+                "kirby-cms",
+                "kirby-plugin",
+                "kirby5",
+                "panel"
+            ],
+            "support": {
+                "docs": "https://github.com/grommasdietz/kirby-hidden-characters/blob/main/README.md",
+                "issues": "https://github.com/grommasdietz/kirby-hidden-characters/issues",
+                "source": "https://github.com/grommasdietz/kirby-hidden-characters"
+            },
+            "time": "2026-07-21T12:53:18+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "7.15.1",
             "source": {
@@ -1534,6 +1587,42 @@
             "time": "2025-05-21T07:46:05+00:00"
         },
         {
+            "name": "medienbaecker/kirby-help-view",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/medienbaecker/kirby-help-view.git",
+                "reference": "dc7eb19f13d22973e287c4615fd613702021c43e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/medienbaecker/kirby-help-view/zipball/dc7eb19f13d22973e287c4615fd613702021c43e",
+                "reference": "dc7eb19f13d22973e287c4615fd613702021c43e",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^5.0",
+                "getkirby/composer-installer": "^1.2"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Günther",
+                    "email": "mail@medienbaecker.com"
+                }
+            ],
+            "description": "Display help articles directly in the Kirby Panel",
+            "support": {
+                "issues": "https://github.com/medienbaecker/kirby-help-view/issues",
+                "source": "https://github.com/medienbaecker/kirby-help-view/tree/1.3.1"
+            },
+            "time": "2026-06-24T09:34:07+00:00"
+        },
+        {
             "name": "michelf/php-smartypants",
             "version": "1.8.1",
             "source": {
@@ -1586,6 +1675,60 @@
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
             "time": "2016-12-13T01:01:17+00:00"
+        },
+        {
+            "name": "moinframe/kirby-accessibility-check",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moinframe/kirby-accessibility-check.git",
+                "reference": "cc2ea452f73fcc8b8dbc55e5819ec93a681c9c9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moinframe/kirby-accessibility-check/zipball/cc2ea452f73fcc8b8dbc55e5819ec93a681c9c9a",
+                "reference": "cc2ea452f73fcc8b8dbc55e5819ec93a681c9c9a",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^5.0",
+                "getkirby/composer-installer": "^1.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "accessibility-check"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justus Kraft",
+                    "email": "justus@moinfra.me",
+                    "homepage": "https://moinfra.me"
+                }
+            ],
+            "description": "Kirby plugin to add accessibility checks",
+            "homepage": "https://github.com/moinframe/kirby-accessibility-check",
+            "keywords": [
+                "accessibility",
+                "check",
+                "cms",
+                "kirby",
+                "plugin"
+            ],
+            "support": {
+                "docs": "https://moinfra.me/docs/moinframe-accessibility-check",
+                "issues": "https://github.com/moinframe/kirby-accessibility-check/issues",
+                "source": "https://github.com/moinframe/kirby-accessibility-check"
+            },
+            "time": "2026-07-24T16:07:24+00:00"
         },
         {
             "name": "moinframe/kirby-image-snippet",
@@ -1700,6 +1843,55 @@
                 "source": "https://github.com/moinframe/kirby-panel-menu"
             },
             "time": "2026-07-21T09:51:46+00:00"
+        },
+        {
+            "name": "philippoehrlein/typo-and-paste",
+            "version": "2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/philippoehrlein/typo-and-paste.git",
+                "reference": "1af6270da2977d19f232ad64888a45b57ecc0f68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/philippoehrlein/typo-and-paste/zipball/1af6270da2977d19f232ad64888a45b57ecc0f68",
+                "reference": "1af6270da2977d19f232ad64888a45b57ecc0f68",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": ">=8.1.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^4.9.2 || ^5.4.2"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "typo-and-paste",
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "Philippoehrlein\\TypoAndPaste\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Oehrlein",
+                    "email": "github@philippoehrlein.de"
+                }
+            ],
+            "description": "A Kirby plugin for managing and inserting special characters with multi-language support.",
+            "homepage": "https://github.com/philippoehrlein/typo-and-paste",
+            "support": {
+                "issues": "https://github.com/philippoehrlein/typo-and-paste/issues",
+                "source": "https://github.com/philippoehrlein/typo-and-paste/tree/v2.4.1"
+            },
+            "time": "2026-05-27T08:01:29+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
