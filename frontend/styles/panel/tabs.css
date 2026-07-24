@@ -1,0 +1,20 @@
+/* Add spacing between tabs and header line */
+.k-header+.k-tabs {
+	margin-top: var(--spacing-2);
+}
+
+/* Remove visual overflow */
+.k-model-tabs {
+	margin-inline: 0;
+}
+
+/* Active tab looks like sidebar button */
+.k-model-tabs .k-tabs-button[aria-current="true"] {
+	--button-color-back: var(--item-color-back);
+	box-shadow: var(--shadow);
+}
+
+/* Drop the default underline indicator */
+.k-model-tabs .k-tabs-button[aria-current="true"]::after {
+	content: none;
+}
