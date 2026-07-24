@@ -1,8 +1,44 @@
+/* Rotate chevrons in collapsed blocks if block uses angle-up icon */
+[data-collapsed="true"] .k-block-type-fields-header:has([data-type="angle-up"]) .k-block-icon {
+	transform: rotate(180deg);
+}
+
+.k-block-container {
+
+	/*
+		Remove borders of the last block in a row
+	*/
+	&:not(:last-of-type) {
+		border-bottom: 0;
+	}
+
+	/*
+	Reduce the outline of the selected block
+	*/
+	&[data-selected=true] {
+		outline: 1px solid var(--color-gray-400);
+
+		/*
+			Remove the outline of the parent if child blocks are selected
+		*/
+		&:has(.k-block-container[data-selected=true]) {
+			outline: none;
+
+			/*
+				Hide options toolbar of the parent if child block is selected
+			*/
+			&>.k-block-options {
+				display: none;
+			}
+		}
+	}
+}
+
 .k-blocks:not([data-empty="true"], [data-disabled="true"], .k-blocks .k-blocks) {
 	background-color: transparent;
 	box-shadow: none;
 
-	& > .k-blocks-list > .k-block-container {
+	&>.k-blocks-list>.k-block-container {
 		&:not(:last-of-type) {
 			border-bottom: none;
 			margin-bottom: 1rem;

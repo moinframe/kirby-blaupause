@@ -1,6 +1,6 @@
 name: panel.layouts.fullwidth.name
 label: panel.layouts.label
-icon: bars
+icon: angle-up
 preview: fields
 wysiwyg: true
 tabs:
