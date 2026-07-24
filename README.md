@@ -32,6 +32,7 @@ Colors are defined with [`light-dark()`](https://developer.mozilla.org/en-US/doc
 - philippoehrlein/typo-and-paste
 - grommasdietz/kirby-hidden-characters
 - moinframe/kirby-accessibility-check
+- junohamburg/kirby-language-selector
 
 ## Prebuild blocks
 This template comes with some prebuild blocks and block extensions.

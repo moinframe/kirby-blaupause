@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "939a122cda44b99f74386a72dc8175e7",
+    "content-hash": "7fc64d8b351d0a643722de006d03b3df",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -1323,6 +1323,41 @@
                 }
             ],
             "time": "2026-07-15T12:06:48+00:00"
+        },
+        {
+            "name": "junohamburg/kirby-language-selector",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/junohamburg/kirby-language-selector.git",
+                "reference": "c3021819365ef8112feaae9c1d7e05c0f30325d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/junohamburg/kirby-language-selector/zipball/c3021819365ef8112feaae9c1d7e05c0f30325d8",
+                "reference": "c3021819365ef8112feaae9c1d7e05c0f30325d8",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JUNO",
+                    "email": "github@juno-hamburg.com"
+                }
+            ],
+            "description": "Kirby Language Selector",
+            "support": {
+                "issues": "https://github.com/junohamburg/kirby-language-selector/issues",
+                "source": "https://github.com/junohamburg/kirby-language-selector/tree/2.0.4"
+            },
+            "time": "2025-10-20T08:54:52+00:00"
         },
         {
             "name": "junohamburg/kirby-visual-block-selector",
