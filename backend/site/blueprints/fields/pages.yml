@@ -1,0 +1,4 @@
+type: pages
+width: 1/2
+image: false
+query: site.children.filterBy('intendedTemplate', 'in', ['home', 'page', 'subpage'])

@@ -30,13 +30,9 @@ tabs:
         type: fields
         fields:
           mainmenu:
+            extends: fields/pages
             label: panel.site.fields.mainmenu.label
-            type: pages
-            width: 1/2
-            image: false
           footermenu:
+            extends: fields/pages
             label: panel.site.fields.footermenu.label
-            type: pages
-            width: 1/2
-            image: false
   seo: tabs/seo/site
