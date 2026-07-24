@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9051c38305116e39e5d3bb02e101517",
+    "content-hash": "12527dc04a8c9b302bced0b63fa003ed",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -478,60 +478,6 @@
                 "source": "https://github.com/femundfilou/kirby-asset-manager/tree/v1.1.1"
             },
             "time": "2025-07-02T21:24:02+00:00"
-        },
-        {
-            "name": "femundfilou/kirby-image-snippet",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/femundfilou/kirby-image-snippet.git",
-                "reference": "291ce61e1d0b19fcbeceb1430defb7bf2eb4adfd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/femundfilou/kirby-image-snippet/zipball/291ce61e1d0b19fcbeceb1430defb7bf2eb4adfd",
-                "reference": "291ce61e1d0b19fcbeceb1430defb7bf2eb4adfd",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/cms": "^4.0 || ^5.0",
-                "getkirby/composer-installer": "^1.1"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.62",
-                "mockery/mockery": "^1.6",
-                "pestphp/pest": "^3.0",
-                "phpunit/phpunit": "^11.0"
-            },
-            "suggest": {
-                "srwiez/thumbhash": "^1.4 - For enhanced placeholder image generation with ThumbHash"
-            },
-            "type": "kirby-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Fefi\\Image\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Justus Kraft",
-                    "email": "hallo@justuskraft.de"
-                }
-            ],
-            "description": "Snippet + Helper Methods for handling images in Kirby",
-            "homepage": "https://github.com/femundfilou/kirby-image-snippet",
-            "keywords": [
-                "kirby-plugin"
-            ],
-            "support": {
-                "issues": "https://github.com/femundfilou/kirby-image-snippet/issues",
-                "source": "https://github.com/femundfilou/kirby-image-snippet/tree/v2.0.0"
-            },
-            "time": "2026-01-31T09:33:45+00:00"
         },
         {
             "name": "filp/whoops",
@@ -1642,17 +1588,71 @@
             "time": "2016-12-13T01:01:17+00:00"
         },
         {
-            "name": "moinframe/kirby-panel-menu",
-            "version": "1.0.1",
+            "name": "moinframe/kirby-image-snippet",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/moinframe/kirby-panel-menu.git",
-                "reference": "7198722e955ed78707e3e81baff7182d75cdff7c"
+                "url": "https://github.com/moinframe/kirby-image-snippet.git",
+                "reference": "291ce61e1d0b19fcbeceb1430defb7bf2eb4adfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moinframe/kirby-panel-menu/zipball/7198722e955ed78707e3e81baff7182d75cdff7c",
-                "reference": "7198722e955ed78707e3e81baff7182d75cdff7c",
+                "url": "https://api.github.com/repos/moinframe/kirby-image-snippet/zipball/291ce61e1d0b19fcbeceb1430defb7bf2eb4adfd",
+                "reference": "291ce61e1d0b19fcbeceb1430defb7bf2eb4adfd",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^4.0 || ^5.0",
+                "getkirby/composer-installer": "^1.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.62",
+                "mockery/mockery": "^1.6",
+                "pestphp/pest": "^3.0",
+                "phpunit/phpunit": "^11.0"
+            },
+            "suggest": {
+                "srwiez/thumbhash": "^1.4 - For enhanced placeholder image generation with ThumbHash"
+            },
+            "type": "kirby-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Fefi\\Image\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justus Kraft",
+                    "email": "hallo@justuskraft.de"
+                }
+            ],
+            "description": "Snippet + Helper Methods for handling images in Kirby",
+            "homepage": "https://github.com/femundfilou/kirby-image-snippet",
+            "keywords": [
+                "kirby-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/moinframe/kirby-image-snippet/issues",
+                "source": "https://github.com/moinframe/kirby-image-snippet/tree/v2.0.0"
+            },
+            "time": "2026-01-31T09:33:45+00:00"
+        },
+        {
+            "name": "moinframe/kirby-panel-menu",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moinframe/kirby-panel-menu.git",
+                "reference": "f3c8661407f947bc2cc2c984d75e7fbbb6f4820a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moinframe/kirby-panel-menu/zipball/f3c8661407f947bc2cc2c984d75e7fbbb6f4820a",
+                "reference": "f3c8661407f947bc2cc2c984d75e7fbbb6f4820a",
                 "shasum": ""
             },
             "require": {
@@ -1699,7 +1699,7 @@
                 "issues": "https://github.com/moinframe/kirby-panel-menu/issues",
                 "source": "https://github.com/moinframe/kirby-panel-menu"
             },
-            "time": "2026-03-25T09:34:24+00:00"
+            "time": "2026-07-21T09:51:46+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

@@ -18,12 +18,12 @@
 		"getkirby/staticache": "^2.1",
 		"getkirby/cli": "^1.9",
 		"distantnative/retour-for-kirby": "^5.6",
-		"femundfilou/kirby-image-snippet": "^2.0",
 		"bnomei/kirby3-dotenv": "^5.1",
 		"timnarr/kirby-obfuscate-email": "^0.1.1",
 		"junohamburg/kirby-visual-block-selector": "^3.0",
 		"moinframe/kirby-panel-menu": "^1.0",
-		"johannschopplich/kirby-serp-preview": "^1.3"
+		"johannschopplich/kirby-serp-preview": "^1.3",
+		"moinframe/kirby-image-snippet": "^2.0"
 	},
 	"minimum-stability": "beta",
 	"prefer-stable": true,
