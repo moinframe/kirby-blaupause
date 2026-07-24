@@ -1,4 +1,4 @@
-![Kirby Blaupause – Kirby CMS Starter Kit](kirby-blaupause.png)
+![Kirby Blaupause – Kirby CMS Starter Kit](kirby-blaupause.jpg)
 # Kirby Blaupause – A Template for Kirby CMS
 
 This template is a starter for new projects, mainly developed out of personal needs. It's based on the tools and technologies we work with and might serve as an inspiration to others.
