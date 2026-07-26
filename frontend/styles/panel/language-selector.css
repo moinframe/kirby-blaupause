@@ -1,0 +1,7 @@
+.k-language-selector {
+	button[data-theme="dark"] {
+		--button-color-back: var(--item-color-back);
+		--theme-color-text: var(--color-black);
+		box-shadow: var(--shadow);
+	}
+}
