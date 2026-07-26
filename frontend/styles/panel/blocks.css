@@ -122,3 +122,17 @@
 	--font-sans: var(--font-family-title);
 	--text-line-height: var(--line-height-title);
 }
+
+.k-block-type-image .k-block-figure-container> :is(img, .k-image-frame) {
+	display: block;
+	max-width: min(100%, var(--block-maxwidth, 100%));
+	margin-inline: auto;
+}
+
+.k-block-type-image .k-block-figure[data-alignment="left"] .k-block-figure-container> :is(img, .k-image-frame) {
+	margin-inline: 0 auto;
+}
+
+.k-block-type-image .k-block-figure[data-alignment="right"] .k-block-figure-container> :is(img, .k-image-frame) {
+	margin-inline: auto 0;
+}
