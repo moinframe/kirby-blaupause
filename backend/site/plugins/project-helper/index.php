@@ -143,5 +143,10 @@ Kirby\Cms\App::plugin('project/helper', [
 			if (!V::in($this->intendedTemplate(), [])) return $mediaPage ?? $this;
 			return $this;
 		},
-	]
+	],
+	'siteMethods' => [
+		'mediaPage' => function () {
+			return $this->children()->first()->mediaPage();
+		},
+	],
 ], version: '1.0.0', info: ['license' => 'MIT']);

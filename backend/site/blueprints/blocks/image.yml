@@ -2,35 +2,9 @@ name: field.blocks.image.name
 icon: image
 preview: image
 fields:
-  location:
-    label: field.blocks.image.location
-    type: radio
-    columns: 2
-    default: "kirby"
-    options:
-      kirby: "{{ t('field.blocks.image.location.internal') }}"
-      web: "{{ t('field.blocks.image.location.external') }}"
   image:
     label: field.blocks.image.name
-    type: files
-    query: model.images
-    multiple: false
-    image:
-      back: black
-    uploads:
-      template: image
-    when:
-      location: kirby
-  src:
-    label: field.blocks.image.url
-    type: url
-    when:
-      location: web
-  alt:
-    label: field.blocks.image.alt
-    type: text
-    icon: title
-  ai: fields/ai
+    extends: fields/image
   caption:
     label: field.blocks.image.caption
     type: writer
@@ -38,7 +12,7 @@ fields:
     inline: true
   link:
     label: field.blocks.image.link
-    type: text
+    type: link
     icon: url
   ratio:
     label: field.blocks.image.ratio
@@ -65,4 +39,7 @@ fields:
     after: px
     width: 1/4
     min: 0
-  alignment: fields/alignment
+  alignment:
+    extends: fields/alignment
+    width: 3/4
+    grow: true

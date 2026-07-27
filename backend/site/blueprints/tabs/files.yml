@@ -12,6 +12,13 @@ sections:
       alt:
         type: html
         value: "{{file.alt.or('--')}}"
+      ai:
+        type: html
+        value: "{{file.ai.or('--')}}"
+        label: panel.fields.ai.label
+      copyright:
+        type: html
+        value: "{{file.copyright.or('--')}}"
     empty: panel.sections.images.empty
   videos:
     label: panel.sections.videos.label

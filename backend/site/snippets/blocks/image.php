@@ -2,9 +2,9 @@
 
 use Kirby\Toolkit\Str;
 
-/** 
+/**
  * @var \Kirby\Cms\Block $block
- * @var \Femundfilou\AssetManager\AssetManager $assetManager 
+ * @var \Femundfilou\AssetManager\AssetManager $assetManager
  * */
 
 $assetManager->add('css',  vite()->asset('frontend/styles/blocks/image.css'));
@@ -34,7 +34,7 @@ $cropRatio = $crop && $ratio != 'auto' ? $ratio->value() : null;
 
 			<?php snippet('media-credits', [
 				'copyright' => $image->copyright(),
-				'ai'        => $block->ai()
+				'ai'        => $image->ai()
 			]) ?>
 		</div>
 

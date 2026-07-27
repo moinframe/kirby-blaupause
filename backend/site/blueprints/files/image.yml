@@ -2,12 +2,15 @@ label: panel.files.image.label
 accept:
   extension: jpg, jpeg, png, webp, svg, gif
 fields:
-  alt:
-    label: panel.files.image.fields.alt.label
-    type: text
-    width: 1/2
   copyright:
     label: panel.files.image.fields.copyright.label
     type: text
     before: ©
     width: 1/2
+  ai:
+    extends: fields/ai
+    width: 1/2
+  alt:
+    label: panel.files.image.fields.alt.label
+    type: text
+    width: 1/1
