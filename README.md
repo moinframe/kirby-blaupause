@@ -39,8 +39,29 @@ This template comes with some prebuild blocks and block extensions.
 - Since we don't use the built-in layouts feature but rely on layout-blocks (see [fullwidth.yml](./backend/site/blueprints/layouts/fullwidth.yml))
 - simple `button` block
 - `spacer` block to add clearances
-- `video` block that supports local videos
+- `video` block that supports local videos as well as YouTube and Vimeo embeds
 - `jumpmark` as a target for buttons and links
+- `ai-label` block that places the EU label for AI generated content inline in the text flow
+
+### Content blocker
+Third party embeds are wrapped in the `content-blocker` snippet, which keeps the embed inside an inert `<template>` until the visitor consents — no request leaves the page beforehand. The overlay (description, privacy policy link, poster, button) is rendered by Kirby, so it is translatable and can contain links. Everything about the service is declared where the snippet is used:
+
+```php
+<?php snippet('content-blocker', [
+	'provider' => 'youtube',
+	'label'    => 'YouTube',
+	'policy'   => 'https://policies.google.com/privacy',
+	'poster'   => $page->poster()->toFile(),
+	'ratio'    => '16/9',
+	'fallback' => $url
+], slots: true) ?>
+	<iframe src="…" title="…"></iframe>
+<?php endsnippet() ?>
+```
+
+The video block matches the service from the embed host, so editors only paste a URL — YouTube and Vimeo get their cookie-less embed variants (`youtube-nocookie.com`, `dnt=1`), any other host still gets a blocker labelled with its hostname.
+
+Accepting unblocks every embed of the same `provider` on the page and is remembered for the session (`remember="none"` opts out). A cookie banner can unblock embeds without a reload by dispatching `consent:change` on `document`, or by exposing `window.CookieConsent.getUserConsent()`. Remember to add the embed hosts to `frame-src` in the CSP (see `backend/site/config/plugins/project.headers.php`).
 
 ## Custom folder setup
 This template uses a custom folder setup. The kirby installation is divided by two individual folders `public` and `backend` to keep kirby's internal files out of the domain root. Since we're often using pipelines to deploy website updates, the `storage` folder keeps all static things available, like `content`, `accounts`, `sessions`, `logs` and `license`, that don't always change on a website update.
