@@ -8,6 +8,7 @@
 	pointer-events: none;
 	padding: var(--space-s);
 	gap: var(--space-xs);
+	flex-wrap: wrap;
 
 }
 
