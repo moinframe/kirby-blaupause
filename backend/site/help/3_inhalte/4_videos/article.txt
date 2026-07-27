@@ -20,9 +20,9 @@ Mit dem **Video-Block** bindest du Videos ein – entweder von einer Plattform w
 
 ## Externes Video (YouTube / Vimeo)
 
-Das ist der Normalfall. Lass die Option **Extern** aktiviert und füg einfach die **URL** des Videos ein, z. B. den YouTube-Link. Mehr braucht es nicht.
+Das ist der Normalfall. Lass die Option **Extern** aktiviert und füg einfach die **URL** des Videos ein, z. B. den YouTube-Link. Ob es sich um YouTube oder Vimeo handelt, erkennt die Website selbst.
 
-**Datenschutz-Hinweis:** Bei externen Videos zeigt die Website zuerst einen Hinweis an. Erst wenn die Besucher:innen auf **Akzeptieren** klicken, wird das Video von YouTube bzw. Vimeo geladen. So bleibt die Seite datenschutzfreundlich.
+**Datenschutz-Hinweis:** Bei externen Videos zeigt die Website zuerst einen Hinweis mit einem Link zu den Datenschutzhinweisen des Anbieters an. Erst wenn die Besucher:innen auf **Inhalt laden** klicken, wird das Video von YouTube bzw. Vimeo geladen – vorher geht keine einzige Anfrage an den Anbieter raus. Ein **Poster** wird dabei als Vorschaubild hinter dem Hinweis angezeigt.
 
 ## Selbst hochgeladenes Video
 

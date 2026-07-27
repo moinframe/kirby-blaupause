@@ -1,0 +1,16 @@
+.ai-label-block {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
+	gap: var(--space-2xs);
+	font-size: var(--font-size-7);
+
+	&.has-text-center {
+		justify-content: center;
+	}
+
+	&.has-text-right {
+		justify-content: flex-end;
+	}
+}

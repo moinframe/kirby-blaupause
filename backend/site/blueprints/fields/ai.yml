@@ -1,0 +1,8 @@
+label: panel.fields.ai.label
+type: select
+icon: ai
+placeholder: panel.fields.ai.placeholder
+help: panel.fields.ai.help
+options:
+  generated: "{{ t('panel.fields.ai.options.generated') }}"
+  modified: "{{ t('panel.fields.ai.options.modified') }}"

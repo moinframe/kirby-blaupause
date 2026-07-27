@@ -1,0 +1,61 @@
+Title: KI-Kennzeichnung
+
+----
+
+Icon: ai
+
+----
+
+Color: green-600
+
+----
+
+Back: green-200
+
+----
+
+Text:
+
+Inhalte, die mit **künstlicher Intelligenz** erzeugt oder verändert wurden, müssen gekennzeichnet werden. Dafür gibt es in dieser Website ein fertiges Kennzeichen – das offizielle **EU-Zeichen für KI-Inhalte**.
+
+## Wann muss ich kennzeichnen?
+
+Die Pflicht kommt aus Artikel 50 der EU-KI-Verordnung und gilt seit dem **2. August 2026**. Kennzeichnen musst du:
+
+- **Bilder, Videos und Audio**, die durch KI so erzeugt oder verändert wurden, dass sie echt wirken (sogenannte Deepfakes) – etwa ein fotorealistisches Bild aus einem Bildgenerator oder ein Foto, in das nachträglich etwas hineingerechnet wurde
+- **Texte, die über Themen von öffentlichem Interesse informieren** und von einer KI geschrieben wurden, ohne dass ein Mensch sie redaktionell geprüft und verantwortet hat
+
+## Wann muss ich *nicht* kennzeichnen?
+
+- Wenn die KI nur **assistierend** gearbeitet hat und der Inhalt dadurch nicht wesentlich verändert wurde – Zuschneiden, Belichtung, Retusche, Rechtschreibkorrektur oder Übersetzung fallen nicht darunter
+- Wenn ein **Mensch den Text redaktionell geprüft** hat und dafür die Verantwortung übernimmt
+- Bei **künstlerischen, kreativen, satirischen oder fiktionalen** Werken reicht ein dezenter Hinweis, der das Werk nicht stört
+
+Im Zweifel gilt: lieber kennzeichnen. Das Zeichen schadet nie, eine fehlende Kennzeichnung schon.
+
+## Bilder und Videos kennzeichnen
+
+Im **Bild-** und im **Video-Block** gibt es das Feld **KI-Kennzeichnung**. Du hast drei Möglichkeiten:
+
+- **Keine Kennzeichnung** – der Normalfall bei echten Fotos und Videos
+- **Vollständig mit KI erstellt** – der komplette Inhalt kommt aus einer KI, ohne menschliche Anteile
+- **Mit KI bearbeitet** – ein echtes Foto oder Video wurde teilweise mit KI verändert
+
+Das Zeichen wird dann automatisch **oben rechts auf dem Bild bzw. Video** eingeblendet – dort, wo es beim ersten Ansehen sofort auffällt. Der Bildnachweis (Copyright) sitzt unten rechts, die beiden kommen sich also nicht in die Quere.
+
+## Texte kennzeichnen
+
+Für Texte gibt es den eigenen Block **KI-Kennzeichnung**. Setz ihn direkt unter oder über den Abschnitt, um den es geht. Du kannst dort:
+
+- die **Art** wählen (vollständig erstellt oder bearbeitet)
+- einen **Begleittext** ergänzen, z. B. „Dieser Abschnitt wurde mit KI erstellt und nicht redaktionell geprüft."
+- zwischen **vollständigem** und **kompaktem** Zeichen wählen
+- die **Ausrichtung** festlegen
+
+Das **kompakte** Zeichen zeigt nur „AI" ohne Wortmarke. Es ist für die Kombination mit einem eigenen Begleittext gedacht – wer nur das Zeichen ohne Text setzt, sollte die vollständige Variante nehmen, weil man ihr direkt ansieht, ob der Inhalt erstellt oder bearbeitet wurde.
+
+## Tipp
+
+Kennzeichne so nah wie möglich am Inhalt selbst. Ein Hinweis im Impressum oder ganz unten auf der Seite reicht nicht – das Zeichen muss beim ersten Kontakt mit dem Inhalt sichtbar sein.
+
+Das offizielle Zeichen und die Hintergründe dazu findest du bei der [EU-Kommission](https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content). Diese Seite ist eine Hilfestellung und keine Rechtsberatung – bei unklaren Fällen frag im Zweifel juristischen Rat.

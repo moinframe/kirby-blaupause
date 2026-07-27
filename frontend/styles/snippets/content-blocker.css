@@ -1,0 +1,90 @@
+@import "../variables/_media-queries.css";
+
+content-blocker {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--border-radius);
+	overflow: clip;
+}
+
+.content-blocker__overlay {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	grid-template-areas: "stack";
+
+	&>* {
+		grid-area: stack;
+	}
+}
+
+.content-blocker__poster {
+	z-index: 1;
+	overflow: clip;
+
+	& picture {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.content-blocker__panel {
+	z-index: 2;
+	align-self: end;
+	margin: var(--space-m);
+	padding: var(--space-s) var(--space-s-m);
+	border-radius: var(--border-radius);
+	color: var(--color-base);
+	background-color: var(--color-base-background);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-xs) var(--space-s);
+	text-align: center;
+
+	@media (--m) {
+		justify-content: space-between;
+		text-align: left;
+		flex-wrap: nowrap;
+	}
+}
+
+.content-blocker__description {
+	font-size: var(--font-size-7);
+
+	& p {
+		margin: 0;
+	}
+
+	& a {
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+@media (scripting: none) {
+	.content-blocker__panel {
+		display: none;
+	}
+
+	content-blocker>noscript {
+		display: grid;
+		position: absolute;
+		inset: 0;
+		z-index: 3;
+
+		& .content-blocker__panel {
+			display: flex;
+		}
+	}
+}

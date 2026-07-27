@@ -5,12 +5,20 @@ button.menu: Menü
 # Aria Labels
 aria.nav.main: Hauptnavigation
 
-# Privacy Overlay
-privacy-overlay.message: Mit dem Ansehen des Videos laden Sie Inhalte von {provider}.
-privacy-overlay.button: Akzeptieren
+# Content Blocker
+content-blocker.description: Beim Laden dieses Inhalts werden Daten an {provider} übertragen. Es gelten die {policy}.
+content-blocker.description.nopolicy: Beim Laden dieses Inhalts werden Daten an {provider} übertragen.
+content-blocker.policy: Datenschutzhinweise von {provider}
+content-blocker.button: Inhalt laden
+content-blocker.noscript: Für diesen Inhalt von {provider} wird JavaScript benötigt.
+content-blocker.fallback: Bei {provider} öffnen
 
 # Video
 video.iframe.title: Video-Player
+
+# AI Label
+ai-label.generated: Mit KI erstellt
+ai-label.modified: Mit KI bearbeitet
 
 # Panel
 panel.site.title: Website
@@ -67,6 +75,11 @@ panel.fields.alignment.label: Ausrichtung
 panel.fields.alignment.options.left.text: Linksbündig
 panel.fields.alignment.options.center.text: Zentriert
 panel.fields.alignment.options.right.text: Rechtsbündig
+panel.fields.ai.label: KI-Kennzeichnung
+panel.fields.ai.placeholder: Keine Kennzeichnung
+panel.fields.ai.help: Verpflichtend, sobald der Inhalt ganz oder teilweise mit KI erzeugt oder verändert wurde.
+panel.fields.ai.options.generated: Vollständig mit KI erstellt
+panel.fields.ai.options.modified: Mit KI bearbeitet
 panel.fields.metaTitle.label: Meta Title
 panel.fields.metaTitle.help: Die empfohlene Länge beträgt 60-70 Zeichen.
 panel.fields.metaDescription.label: Meta Description
@@ -155,3 +168,10 @@ panel.blocks.jumpmark.fields.jumpmark.label: Identifikator
 panel.blocks.jumpmark.fields.jumpmark.help: Hier sollte ein für die Seite einzigartiger Name verwendet werden. Kleinschreibung und keine Leerzeichen.
 panel.blocks.spacer.name: Abstand
 panel.blocks.spacer.fields.height.label: Höhe
+panel.blocks.ai-label.name: KI-Kennzeichnung
+panel.blocks.ai-label.fields.compact.label: Darstellung
+panel.blocks.ai-label.fields.compact.help: Das kompakte Zeichen zeigt nur „AI“ und ist für die Kombination mit einem eigenen Begleittext gedacht.
+panel.blocks.ai-label.fields.compact.options.false: Vollständig
+panel.blocks.ai-label.fields.compact.options.true: Kompakt
+panel.blocks.ai-label.fields.text.label: Begleittext
+panel.blocks.ai-label.fields.text.help: Optional. Erklärt, welcher Teil des Inhalts mit KI erstellt wurde.

@@ -10,15 +10,26 @@
 		align-items: flex-start;
 	}
 
-	&.has-text-centered {
+	&.has-text-center {
 		align-items: center;
+	}
+
+	/* Anchor for the credit badges, which are positioned over the image only */
+	& .block-image__media {
+		position: relative;
+		width: 100%;
+		max-width: var(--max-width, none);
+
+		&>a {
+			display: block;
+		}
 	}
 
 	& picture {
 		aspect-ratio: var(--aspect-ratio);
 		width: 100%;
 		height: auto;
-		max-width: var(--max-width, none);
+		overflow: clip;
 	}
 
 	& figcaption {

@@ -30,6 +30,7 @@ fields:
     label: field.blocks.image.alt
     type: text
     icon: title
+  ai: fields/ai
   caption:
     label: field.blocks.image.caption
     type: writer

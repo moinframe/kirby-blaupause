@@ -1,0 +1,25 @@
+name: panel.blocks.ai-label.name
+icon: ai
+fields:
+  ai:
+    extends: fields/ai
+    required: true
+    width: 1/2
+  compact:
+    label: panel.blocks.ai-label.fields.compact.label
+    type: toggle
+    width: 1/2
+    help: panel.blocks.ai-label.fields.compact.help
+    text:
+      - *: panel.blocks.ai-label.fields.compact.options.false
+      - *: panel.blocks.ai-label.fields.compact.options.true
+  text:
+    label: panel.blocks.ai-label.fields.text.label
+    extends: fields/writer
+    help: panel.blocks.ai-label.fields.text.help
+    marks:
+      - bold
+      - link
+      - email
+      - clear
+  alignment: fields/alignment

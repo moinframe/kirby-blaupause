@@ -1,0 +1,21 @@
+# Buttons
+button.skip-menu: Skip to main content
+button.menu: Menu
+
+# Aria Labels
+aria.nav.main: Main navigation
+
+# Content Blocker
+content-blocker.description: Loading this content transfers data to {provider}. Their {policy} applies.
+content-blocker.description.nopolicy: Loading this content transfers data to {provider}.
+content-blocker.policy: privacy policy of {provider}
+content-blocker.button: Load content
+content-blocker.noscript: This content from {provider} requires JavaScript.
+content-blocker.fallback: Open on {provider}
+
+# Video
+video.iframe.title: Video player
+
+# AI Label
+ai-label.generated: Created with AI
+ai-label.modified: Edited with AI

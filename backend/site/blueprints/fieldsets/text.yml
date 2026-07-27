@@ -5,4 +5,5 @@ fieldsets:
   - text
   - list
   - quote
+  - ai-label
   - spacer
