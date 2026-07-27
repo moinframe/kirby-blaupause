@@ -1,4 +1,4 @@
 <?php
 return [
-	"theme" => "light"
+	"theme" => "auto"
 ];
