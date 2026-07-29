@@ -26,13 +26,44 @@ tabs:
     label:  panel.site.tabs.headerfooter.label
     icon: header-footer
     sections:
-      fields:
+      header:
         type: fields
+        label: panel.site.sections.header.label
         fields:
+          logo:
+            extends: fields/image
+            label: panel.site.fields.logo.label
+            width: 1/2
           mainmenu:
             extends: fields/pages
             label: panel.site.fields.mainmenu.label
+      footer:
+        type: fields
+        label: panel.site.sections.footer.label
+        fields:
+          footerBlocks:
+            extends: fields/blocks
+            label: panel.site.fields.footerBlocks.label
+            width: 2/4
           footermenu:
             extends: fields/pages
             label: panel.site.fields.footermenu.label
+            width: 1/4
+          footermenu2:
+            extends: fields/pages
+            label: panel.site.fields.footermenu2.label
+            width: 1/4
+          metamenu:
+            extends: fields/pages
+            label: panel.site.fields.metamenu.label
+            width: 1/2
+            help: panel.site.fields.metamenu.help
+          social:
+            label: panel.site.fields.social.label
+            type: entries
+            width: 1/2
+            field:
+              label: panel.site.fields.social.url.label
+              type: url
+              required: true
   seo: tabs/seo/site

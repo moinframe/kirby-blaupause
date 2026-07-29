@@ -15,6 +15,9 @@ module.exports = {
 	rejected: false, // Activate to see which css has been removed
 	variables: false, // Remove unused css variables
 	dynamicAttributes: [
+		// Set by the main-menu element on the flyout backdrop
+		"data-open",
+		"data-instant",
 		"data-layout",
 		"data-theme",
 		"data-style",

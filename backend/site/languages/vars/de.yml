@@ -2,8 +2,14 @@
 button.skip-menu: Zum Hauptinhalt springen
 button.menu: Menü
 
+# Menu
+menu.overview: Übersicht
+
 # Aria Labels
 aria.nav.main: Hauptnavigation
+aria.nav.footer: Footer-Navigation
+aria.nav.meta: Meta-Navigation
+aria.social: Soziale Netzwerke
 
 # Content Blocker
 content-blocker.description: Beim Laden dieses Inhalts werden Daten an {provider} übertragen. Es gelten die {policy}.
@@ -30,10 +36,20 @@ panel.site.tabs.headerfooter.label: Header & Footer
 # Site Sections
 panel.site.sections.pages.label: Veröffentlichte Seiten
 panel.site.sections.drafts.label: Entwürfe
+panel.site.sections.header.label: Header
+panel.site.sections.footer.label: Footer
 
 # Site Fields
+panel.site.fields.logo.label: Logo
 panel.site.fields.mainmenu.label: Hauptnavigation
-panel.site.fields.footermenu.label: Footer-Navigation
+panel.site.fields.footerBlocks.label: Footer-Text
+panel.site.fields.footermenu.label: Footer-Navigation (1. Spalte)
+panel.site.fields.footermenu2.label: Footer-Navigation (2. Spalte)
+panel.site.fields.metamenu.label: Meta-Navigation
+panel.site.fields.metamenu.help: Rechtliches wie Impressum und Datenschutz. Erscheint unten im Footer.
+panel.site.fields.social.label: Social Media
+panel.site.fields.social.platform.label: Plattform
+panel.site.fields.social.url.label: URL
 
 # Page
 panel.page.status.draft.label: Entwurf
@@ -51,6 +67,7 @@ panel.page.template.home.label: Startseite
 panel.tabs.content.label: Inhalte
 panel.tabs.files.label: Dateien
 panel.tabs.subpages.label: Unterseiten
+panel.tabs.menu.label: Menü
 panel.tabs.seo.label: SEO
 
 # Sections
@@ -80,6 +97,16 @@ panel.fields.ai.placeholder: Keine Kennzeichnung
 panel.fields.ai.help: Verpflichtend, sobald der Inhalt ganz oder teilweise mit KI erzeugt oder verändert wurde.
 panel.fields.ai.options.generated: Vollständig mit KI erstellt
 panel.fields.ai.options.modified: Mit KI bearbeitet
+panel.fields.menuTitle.label: Titel im Menü
+panel.fields.menuTitle.help: Optional. Ersetzt den Seitentitel in der Navigation.
+panel.fields.menuText.label: Teaser
+panel.fields.menuText.help: Optional. Kurzer Text, der die Inhalte der Seite weiter beschreibt.
+panel.fields.menuImage.label: Titelbild
+panel.fields.menuImage.help: Optional. Wird unter Umständen in der Navigation verwendet.
+panel.fields.menuStyle.label: Darstellung
+panel.fields.menuStyle.options.default: Standard
+panel.fields.menuStyle.options.accent: Hervorgehoben
+panel.fields.menuStyle.options.button: Button
 panel.fields.metaTitle.label: Meta Title
 panel.fields.metaTitle.help: Die empfohlene Länge beträgt 60-70 Zeichen.
 panel.fields.metaDescription.label: Meta Description

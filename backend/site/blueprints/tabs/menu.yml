@@ -1,0 +1,36 @@
+# Defines how a page is represented in the menus.
+# The fields are read by snippets/page/menu-item.php.
+icon: menu
+label: panel.tabs.menu.label
+sections:
+  fields:
+    type: fields
+    fields:
+      menuTitle:
+        extends: fields/writer
+        label: panel.fields.menuTitle.label
+        width: 1/2
+        placeholder: "{{ page.title }}"
+        help: panel.fields.menuTitle.help
+      menuStyle:
+        label: panel.fields.menuStyle.label
+        type: toggles
+        default: default
+        width: 1/2
+        options:
+          default:
+            *: panel.fields.menuStyle.options.default
+          accent:
+            *: panel.fields.menuStyle.options.accent
+          button:
+            *: panel.fields.menuStyle.options.button
+      menuText:
+        extends: fields/writer
+        label: panel.fields.menuText.label
+        width: 1/2
+        help: panel.fields.menuText.help
+      menuImage:
+        extends: fields/image
+        width: 1/2
+        label: panel.fields.menuImage.label
+        help: panel.fields.menuImage.help

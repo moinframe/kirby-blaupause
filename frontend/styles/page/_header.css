@@ -1,33 +1,18 @@
 #page-header {
-	--_background: transparent;
-	--_color: var(--color-base);
 	position: absolute;
 	z-index: 99;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: var(--_background);
-	transition: background 0.15s var(--ease-out);
-	color: var(--_color);
 	padding-block: var(--space-s);
-
-	a {
-		color: var(--_color);
-	}
 
 	&.scrolled {
 		transition: transform 0.15s var(--ease-out);
 
 		&.scrolled-beyond-header {
 			@media (--m) {
-				--_background: var(--color-base-background);
 				position: fixed;
 				transform: translateY(-100%);
-				color: var(--color-base);
-
-				a {
-					color: var(--color-base);
-				}
 			}
 		}
 
@@ -44,113 +29,440 @@
 			}
 		}
 	}
+}
 
-	& nav {
-		.submenu a {
-			color: var(--color-base);
+.menubar {
+	--menubar-surface: var(--color-neutral-0);
+	--menubar-shadow: 0 0.25rem 1.5rem oklch(0 0 0 / 12%);
+	--menubar-radius: var(--border-radius);
+	--menubar-inset: var(--space-2xs);
+	--menubar-item-radius: calc(var(--menubar-radius) - var(--menubar-inset));
+	--menubar-logo-height: 3.3rem;
+	--menubar-preview: 15rem;
+	--menubar-morph: 0.35s var(--ease-in-out);
+	--menubar-hover: color-mix(in oklch, currentcolor 10%, transparent);
+	--animation-duration: 0.15s;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+	padding: var(--menubar-inset) var(--space-xs) var(--menubar-inset) var(--menubar-inset);
+	border-radius: var(--menubar-radius);
+	background: var(--menubar-surface);
+	box-shadow: var(--menubar-shadow);
+	color: var(--color-neutral-900);
+
+	.menubar__logo {
+		display: flex;
+		align-items: center;
+		font-weight: var(--font-weight-bold);
+		line-height: 1;
+		white-space: nowrap;
+
+		& img {
+			width: auto;
+			height: var(--menubar-logo-height);
 		}
+	}
+}
 
-		li {
-			border: 0;
+/*--------------------------------------------------------------
+# Items
+--------------------------------------------------------------*/
+.menubar__item {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
 
-			a {
-				position: relative;
-				font-weight: var(--font-weight-normal);
-				padding-block: 0.75em;
+.menubar__link {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: var(--space-2xs);
+	padding: var(--space-xs) var(--space-s);
+	border: 0;
+	border-radius: var(--menubar-item-radius);
+	appearance: none;
+	background: none;
+	color: var(--menubar-item-color, inherit);
+	font: inherit;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: background-color var(--animation-duration) var(--animation-ease);
 
-				@media (--m) {
-					padding-block: var(--space-s);
-				}
+	&:hover,
+	&[aria-expanded="true"] {
+		background: var(--menubar-hover);
+	}
+}
 
-				&::after {
-					content: attr(data-text);
-					font-weight: var(--font-weight-bold);
-					display: block;
-					opacity: 0;
-				}
+.menubar__link--accent,
+.menubar__sub--accent {
+	--menubar-item-color: var(--color-accent);
+}
 
-				span {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-				}
-			}
+.menubar__cta,
+.menubar__toggle {
+	--button-background: var(--color-neutral-900);
+	--button-color: var(--color-neutral-0);
+	--button-hover-color: var(--color-neutral-0);
+	--button-border-radius: var(--menubar-item-radius);
+}
 
-			&:hover,
-			&:focus-visible {
-				> a > span {
-					font-weight: var(--font-weight-bold);
-				}
-			}
+.menubar__toggle {
 
-			&.is-active > a > span {
-				font-weight: var(--font-weight-bold);
-			}
-		}
+	&[aria-expanded="false"] .i[data-icon="close"],
+	&[aria-expanded="true"] .i[data-icon="menu"] {
+		display: none;
+	}
+}
 
-		@media (--m-max) {
-			z-index: 3;
-			position: absolute;
-			bottom: 0;
-			right: 0;
+.menubar__disclosure .i {
+	margin-inline-start: auto;
+
+	@media (--m) {
+		display: none;
+	}
+}
+
+.menubar__link:focus-visible,
+.menubar__sub:focus-visible,
+.menubar__logo:focus-visible,
+.menubar__preview--parent:focus-visible {
+	outline: var(--outline-width) solid var(--outline-color);
+	outline-offset: var(--outline-offset);
+}
+
+.menubar__label {
+	display: block;
+
+	&::after {
+		content: attr(data-text);
+		display: block;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+		font-weight: var(--font-weight-bold);
+	}
+}
+
+.menubar__item:hover .menubar__label,
+.menubar__item:focus-within .menubar__label,
+[aria-expanded="true"] .menubar__label,
+[aria-current] .menubar__label {
+	font-weight: var(--font-weight-bold);
+}
+
+/*--------------------------------------------------------------
+# Drawer & flyout
+--------------------------------------------------------------*/
+.menubar__nav,
+.menubar__flyout {
+	display: none;
+	opacity: 0;
+	transition:
+		opacity var(--animation-duration) var(--animation-ease),
+		display var(--animation-duration) allow-discrete;
+}
+
+[aria-expanded="true"]+.menubar__nav,
+[aria-expanded="true"]+.menubar__flyout {
+	display: flex;
+	opacity: 1;
+
+	@starting-style {
+		opacity: 0;
+	}
+}
+
+.menubar__nav {
+	position: absolute;
+	z-index: 1;
+	top: calc(100% + var(--space-xs));
+	left: 50%;
+	width: min(20rem, 85vw);
+	padding: var(--menubar-inset);
+	border-radius: var(--menubar-radius);
+	background: var(--menubar-surface);
+	box-shadow: var(--menubar-shadow);
+	translate: -50% -0.5rem;
+	transition:
+		opacity var(--animation-duration) var(--animation-ease),
+		translate var(--animation-duration) var(--animation-ease),
+		display var(--animation-duration) allow-discrete;
+}
+
+[aria-expanded="true"]+.menubar__nav {
+	translate: -50% 0;
+
+	@starting-style {
+		translate: -50% -0.5rem;
+	}
+}
+
+.menubar__flyout {
+	flex-direction: column;
+	gap: var(--space-2xs);
+	width: 100%;
+	padding-left: var(--space-s);
+}
+
+.menubar__sublist {
+	flex: 1;
+}
+
+.menubar__sub,
+.menubar__preview--parent {
+	display: block;
+	padding: var(--space-2xs) var(--space-xs);
+	border-radius: var(--menubar-item-radius);
+	color: var(--menubar-item-color, inherit);
+	transition: background-color var(--animation-duration) var(--animation-ease);
+
+	&:hover {
+		background: var(--menubar-hover);
+	}
+}
+
+.menubar__sub[aria-current="page"] .menubar__sub-title {
+	font-weight: var(--font-weight-bold);
+}
+
+.menubar__sub--button {
+	--menubar-item-color: var(--color-neutral-0);
+
+	background: var(--color-neutral-900);
+
+	&:hover {
+		background: color-mix(in oklch, var(--color-neutral-900), var(--color-neutral-1000) 18%);
+	}
+}
+
+.menubar__preview {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2xs);
+	line-height: var(--line-height);
+}
+
+.menubar__preview-title,
+.menubar__preview-overview {
+	font-weight: var(--font-weight-bold);
+}
+
+.menubar__sub .menubar__preview,
+.menubar__preview-image,
+.menubar__preview-text {
+	display: none;
+}
+
+.menubar__preview--parent .menubar__preview-title {
+	display: none;
+}
+
+.menubar__preview--parent .menubar__preview-text {
+	display: block;
+	color: var(--color-neutral-600);
+}
+
+/*--------------------------------------------------------------
+# From m upwards: nav in the bar, submenus as flyout
+--------------------------------------------------------------*/
+@media (--m) {
+	.menubar__nav {
+		position: static;
+		display: block;
+		width: auto;
+		padding: 0;
+		border-radius: 0;
+		background: none;
+		box-shadow: none;
+		opacity: 1;
+		translate: none;
+	}
+
+	.menubar__link {
+		flex: none;
+	}
+
+	.menubar__flyout {
+		position: absolute;
+		z-index: 1;
+		top: calc(100% + var(--space-xs));
+		left: 50%;
+		translate: -50%;
+		flex-direction: row;
+
+		width: max-content;
+		max-width: min(42rem, 90vw);
+		padding: var(--menubar-inset);
+	}
+
+	.menubar__sublist {
+		min-width: 12rem;
+	}
+
+	.menubar__sub {
+		padding: var(--space-xs) var(--space-s);
+	}
+
+	.menubar__preview-image {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+
+		& img {
 			width: 100%;
-			background-color: var(--color-base-background);
-			color: var(--color-base);
-			transform: translate(0, 120%);
-			opacity: 0;
-			visibility: hidden;
-			padding: 2em;
-			display: flex;
-
-			/* Without JS the toggle cannot work, show the menu expanded instead */
-			@media (scripting: none) {
-				position: static;
-				transform: none;
-				opacity: 1;
-				visibility: visible;
-			}
-
-			a {
-				color: var(--color-base);
-			}
-
-			ul {
-				flex-direction: column;
-				align-items: flex-start;
-			}
 		}
 	}
 
-	button[aria-controls="mainnav"] {
+	.menubar__preview-text {
+		display: block;
+		color: var(--color-neutral-600);
+	}
+
+	.menubar__preview-overview {
+		display: none;
+	}
+
+	.menubar__preview--parent .menubar__preview-title {
+		display: block;
+	}
+
+	.menubar__preview {
+		padding: var(--space-s);
+		border-radius: var(--menubar-item-radius);
+		background: var(--menubar-hover);
+		color: var(--color-neutral-900);
+		transition:
+			opacity var(--animation-duration) var(--animation-ease);
+	}
+
+	.menubar__preview--parent {
 		position: relative;
-		z-index: 2;
-		padding-right: var(--button-padding-inline);
-		font-size: 1.2em;
+		flex: none;
+		width: var(--menubar-preview);
 
-		.i {
-			display: none;
+		&:hover {
+			background: color-mix(in oklch, currentcolor 16%, transparent);
+		}
+	}
+
+	.menubar__sub .menubar__preview {
+		position: absolute;
+		top: var(--menubar-inset);
+		bottom: var(--menubar-inset);
+		left: var(--menubar-inset);
+		display: flex;
+		width: var(--menubar-preview);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.menubar__sub--button .menubar__preview-text {
+		color: var(--color-neutral-600);
+	}
+
+	.menubar__flyout:has(.menubar__sub:hover) .menubar__preview--parent,
+	.menubar__flyout:has(.menubar__sub:focus-visible) .menubar__preview--parent {
+		opacity: 0;
+	}
+
+	.menubar__sub:hover .menubar__preview,
+	.menubar__sub:focus-visible .menubar__preview {
+		opacity: 1;
+	}
+
+	.menubar__flyout:has(.menubar__preview--parent:focus-visible) .menubar__preview--parent {
+		opacity: 1;
+	}
+}
+
+/*--------------------------------------------------------------
+# Backdrop, moved and resized by menu.ts
+--------------------------------------------------------------*/
+.menubar__backdrop {
+	display: none;
+
+	@media (--m) {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		display: block;
+		width: var(--menubar-backdrop-w, 0);
+		height: var(--menubar-backdrop-h, 0);
+		translate: var(--menubar-backdrop-x, 0) var(--menubar-backdrop-y, 0);
+		border-radius: var(--menubar-radius);
+		background: var(--menubar-surface);
+		box-shadow: var(--menubar-shadow);
+		opacity: 0;
+		scale: 0.98;
+		pointer-events: none;
+		transition:
+			opacity var(--animation-duration) var(--animation-ease),
+			scale var(--animation-duration) var(--animation-ease),
+			translate var(--menubar-morph),
+			width var(--menubar-morph),
+			height var(--menubar-morph);
+
+		&[data-instant] {
+			transition:
+				opacity var(--animation-duration) var(--animation-ease),
+				scale var(--animation-duration) var(--animation-ease);
 		}
 
-		@media (scripting: none) {
+		&[data-open] {
+			opacity: 1;
+			scale: 1;
+		}
+	}
+}
+
+@media (scripting: none) {
+	.menubar {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.menubar__toggle {
+		display: none;
+	}
+
+	.menubar__nav,
+	.menubar__flyout {
+		display: flex;
+		opacity: 1;
+		translate: none;
+	}
+
+	.menubar__nav {
+		position: static;
+		width: auto;
+		padding: 0;
+		background: none;
+		box-shadow: none;
+	}
+
+	@media (--m) {
+		.menubar__flyout {
 			display: none;
+			opacity: 0;
+			translate: -50%;
+			border-radius: var(--menubar-radius);
+			background: var(--menubar-surface);
+			box-shadow: var(--menubar-shadow);
 		}
 
-		&[aria-expanded="true"] {
-			padding-right: 1em;
-
-			.i {
-				display: inline-flex;
-			}
-
-			& + nav {
-				transition:
-					transform 0.2s ease-in,
-					opacity 0.2s 0.1s ease-in;
-				transform: translateY(100%);
-				opacity: 1;
-				visibility: visible;
-			}
+		.menubar__item:hover .menubar__flyout,
+		.menubar__item:focus-within .menubar__flyout {
+			display: flex;
+			opacity: 1;
 		}
 	}
 }

@@ -15,4 +15,5 @@ tabs:
           main:
             extends: fields/layouts
   subpages: tabs/subpages
+  menu: tabs/menu
   seo: tabs/seo/page

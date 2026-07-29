@@ -1,5 +1,89 @@
 #page-footer {
-	.menu {
-		justify-content: flex-end;
+	--footer-color: var(--color-neutral-0);
+	--footer-hover: var(--color-neutral-700);
+	--footer-cell: var(--space-xs) var(--space-s);
+	--footer-logo-height: 2.5rem;
+	--animation-duration: 0.15s;
+
+	background: var(--color-neutral-900);
+	color: var(--footer-color);
+}
+
+/*--------------------------------------------------------------
+# Menu groups
+--------------------------------------------------------------*/
+.footer__menus {
+	display: grid;
+	align-content: start;
+	grid-auto-columns: minmax(0, 1fr);
+	gap: var(--space-xs);
+
+	@media (--s) {
+		grid-auto-flow: column;
 	}
+}
+
+.footer__menu {
+	display: grid;
+	align-content: start;
+	gap: var(--space-xs);
+}
+
+/*--------------------------------------------------------------
+# Bottom bar
+--------------------------------------------------------------*/
+.footer__bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	margin-top: var(--space-2xl);
+	border-top: 2px solid var(--color-neutral-800);
+	padding-top: var(--space-xs);
+	gap: var(--space-xs);
+	justify-content: stretch;
+}
+
+.footer__group {
+	display: flex;
+	gap: var(--space-xs);
+}
+
+.footer__copyright {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	max-width: none;
+	white-space: nowrap;
+}
+
+/*--------------------------------------------------------------
+# Cells
+--------------------------------------------------------------*/
+.footer__link {
+	display: flex;
+	align-items: center;
+	padding: var(--footer-cell);
+	color: var(--footer-color);
+	background-color: var(--color-neutral-800);
+	border-radius: var(--border-radius);
+	transition: background-color var(--animation-duration) var(--animation-ease);
+
+	&:hover {
+		background: var(--footer-hover);
+	}
+
+	&:focus-visible {
+		outline: var(--outline-width) solid var(--outline-color);
+		outline-offset: calc(var(--outline-offset) * -1);
+	}
+
+	&[aria-current="page"] {
+		font-weight: var(--font-weight-bold);
+	}
+}
+
+.footer__link--icon {
+	justify-content: center;
+	min-width: 3rem;
+	height: 100%;
 }

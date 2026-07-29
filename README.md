@@ -82,8 +82,6 @@ When changing template internals you can dry-run a fresh project generation with
 - `scripts/test-template.sh --init` — …then run `kirby init` in the sandbox
 - `scripts/test-template.sh --dir DIR` — use a custom sandbox path
 
-Each run creates a fresh sandbox under `.init-sandbox/` (gitignored); nothing is committed and nothing is deleted, so remove old runs yourself when done.
-
 ## License
 MIT
 

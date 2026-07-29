@@ -2,8 +2,14 @@
 button.skip-menu: Skip to main content
 button.menu: Menu
 
+# Menu
+menu.overview: Overview
+
 # Aria Labels
 aria.nav.main: Main navigation
+aria.nav.footer: Footer navigation
+aria.nav.meta: Meta navigation
+aria.social: Social media
 
 # Content Blocker
 content-blocker.description: Loading this content transfers data to {provider}. Their {policy} applies.
@@ -19,3 +25,180 @@ video.iframe.title: Video player
 # AI Label
 ai-label.generated: Created with AI
 ai-label.modified: Edited with AI
+
+# Panel
+panel.site.title: Website
+
+# Site Tabs
+panel.site.tabs.dashboard.label: Dashboard
+panel.site.tabs.headerfooter.label: Header & Footer
+
+# Site Sections
+panel.site.sections.pages.label: Published pages
+panel.site.sections.drafts.label: Drafts
+panel.site.sections.header.label: Header
+panel.site.sections.footer.label: Footer
+
+# Site Fields
+panel.site.fields.logo.label: Logo
+panel.site.fields.mainmenu.label: Main navigation
+panel.site.fields.footerBlocks.label: Footer text
+panel.site.fields.footermenu.label: Footer navigation (1st column)
+panel.site.fields.footermenu2.label: Footer navigation (2nd column)
+panel.site.fields.metamenu.label: Meta navigation
+panel.site.fields.metamenu.help: Legal pages such as imprint and privacy policy. Appears at the bottom of the footer.
+panel.site.fields.social.label: Social media
+panel.site.fields.social.platform.label: Platform
+panel.site.fields.social.url.label: URL
+
+# Page
+panel.page.status.draft.label: Draft
+panel.page.status.unlisted.label: Published
+panel.page.status.listed.label: Published & in menu
+
+# Templates
+panel.page.template.page.label: Default page
+panel.page.template.subpage.label: Subpage
+panel.page.template.media.label: Media
+panel.page.template.error.label: Error page
+panel.page.template.home.label: Home page
+
+# Tabs
+panel.tabs.content.label: Content
+panel.tabs.files.label: Files
+panel.tabs.subpages.label: Subpages
+panel.tabs.menu.label: Menu
+panel.tabs.seo.label: SEO
+
+# Sections
+panel.sections.images.label: Images
+panel.sections.images.empty: No images
+panel.sections.files.label: Files
+panel.sections.videos.label: Videos
+panel.sections.videos.empty: No videos
+panel.sections.subpages.label: Subpages
+
+# Fields
+panel.fields.blocks.label: Blocks
+panel.fields.hero.label: Hero
+panel.fields.hero.empty: No hero added.
+panel.fields.image.label: Image
+panel.fields.image.empty: No image added.
+panel.fields.layouts.label: Layouts
+panel.fields.layouts.empty: No layouts added.
+panel.fields.video.label: Video
+panel.fields.video.empty: No video added.
+panel.fields.alignment.label: Alignment
+panel.fields.alignment.options.left.text: Left
+panel.fields.alignment.options.center.text: Centered
+panel.fields.alignment.options.right.text: Right
+panel.fields.ai.label: AI disclosure
+panel.fields.ai.placeholder: No disclosure
+panel.fields.ai.help: Required as soon as the content has been fully or partly generated or modified with AI.
+panel.fields.ai.options.generated: Fully created with AI
+panel.fields.ai.options.modified: Edited with AI
+panel.fields.menuTitle.label: Title in menu
+panel.fields.menuTitle.help: Optional. Replaces the page title in the navigation.
+panel.fields.menuText.label: Teaser
+panel.fields.menuText.help: Optional. Short text describing the contents of the page in more detail.
+panel.fields.menuImage.label: Cover image
+panel.fields.menuImage.help: Optional. May be used in the navigation.
+panel.fields.menuStyle.label: Appearance
+panel.fields.menuStyle.options.default: Default
+panel.fields.menuStyle.options.accent: Highlighted
+panel.fields.menuStyle.options.button: Button
+panel.fields.metaTitle.label: Meta title
+panel.fields.metaTitle.help: The recommended length is 60-70 characters.
+panel.fields.metaDescription.label: Meta description
+panel.fields.metaDescription.help: The recommended length is 155-160 characters.
+panel.fields.metaRobots.label: Robots
+panel.fields.metaRobots.options.index.text: Allow indexing (index + follow)
+panel.fields.metaRobots.options.noindex.text: Disallow indexing (noindex + nofollow)
+panel.fields.ogImage.label: OG image
+panel.fields.ogImage.help: The image is resized to 1200x630.
+
+# Fieldsets
+panel.fieldsets.heroes.label: Heroes
+panel.fieldsets.links.label: Links
+panel.fieldsets.media.label: Media
+panel.fieldsets.text.label: Text
+
+# Files
+panel.files.default.label: File
+panel.files.image.label: Image
+panel.files.video.label: Video
+panel.files.image.fields.alt.label: Alt text
+panel.files.image.fields.copyright.label: Copyright
+
+# Layouts Tabs
+panel.layouts.tabs.alignment.label: Alignment
+panel.layouts.tabs.alignment.fields.width.label: Width
+panel.layouts.tabs.alignment.fields.width.options.default: Default
+panel.layouts.tabs.alignment.fields.width.options.full: Full width
+panel.layouts.tabs.alignment.fields.verticalalign.label: Vertical alignment
+panel.layouts.tabs.alignment.fields.verticalalign.options.top: Top
+panel.layouts.tabs.alignment.fields.verticalalign.options.bottom: Bottom
+panel.layouts.tabs.alignment.fields.verticalalign.options.center: Centered
+panel.layouts.tabs.alignment.fields.verticalalign.options.stretch: Stretched
+panel.layouts.tabs.alignment.fields.spacetop.label: Space above
+panel.layouts.tabs.alignment.fields.spacetop.options.none: None
+panel.layouts.tabs.alignment.fields.spacetop.options.small: Small
+panel.layouts.tabs.alignment.fields.spacetop.options.medium: Medium
+panel.layouts.tabs.alignment.fields.spacetop.options.large: Large
+panel.layouts.tabs.alignment.fields.spacebottom.label: Space below
+panel.layouts.tabs.alignment.fields.spacebottom.options.none: None
+panel.layouts.tabs.alignment.fields.spacebottom.options.small: Small
+panel.layouts.tabs.alignment.fields.spacebottom.options.medium: Medium
+panel.layouts.tabs.alignment.fields.spacebottom.options.large: Large
+panel.layouts.tabs.alignment.fields.columnsreverse: Reverse column order
+panel.layouts.tabs.alignment.fields.columnsreverse.false: No
+panel.layouts.tabs.alignment.fields.columnsreverse.true: Yes
+panel.layouts.tabs.style.label: Style
+
+# Layouts
+panel.layouts.label: Layout
+panel.layouts.fullwidth.name: Full width
+panel.layouts.two-columns.name: Two columns
+panel.layouts.three-columns.name: Three columns
+
+# Blocks
+panel.blocks.hero-default.name: Default hero
+panel.blocks.hero-default.fields.heading.label: Page title
+panel.blocks.image.fields.maxwidth.label: Maximum width
+panel.blocks.image.fields.ratio.placeholder: Auto
+panel.blocks.video.fields.external.label: External video
+panel.blocks.video.fields.external.options.false: No
+panel.blocks.video.fields.external.options.true: Yes
+panel.blocks.video.fields.poster.label: Poster
+panel.blocks.video.fields.sources.label: Videos
+panel.blocks.video.fields.ratio.placeholder: Auto
+panel.blocks.video.fields.poster.help: A poster is shown while the video has not been loaded.
+panel.blocks.video.fields.loop.label: Loop
+panel.blocks.video.fields.loop.help: The video is muted and played in an endless loop.
+panel.blocks.video.fields.loop.options.false: No
+panel.blocks.video.fields.loop.options.true: Yes
+panel.blocks.button.name: Button
+panel.blocks.button.fields.style.label: Style
+panel.blocks.button.fields.style.options.default.text: Default
+panel.blocks.button.fields.style.options.text.text: Text
+panel.blocks.heading.fields.style.label: Style
+panel.blocks.text.fields.style.label: Style
+panel.blocks.text.fields.style.options.large.text: Larger
+panel.blocks.text.fields.style.options.default.text: Normal
+panel.blocks.text.fields.style.options.small.text: Smaller
+panel.blocks.list.fields.style.label: Style
+panel.blocks.list.fields.style.options.large.text: Larger
+panel.blocks.list.fields.style.options.default.text: Normal
+panel.blocks.list.fields.style.options.small.text: Smaller
+panel.blocks.jumpmark.name: Anchor
+panel.blocks.jumpmark.fields.jumpmark.label: Identifier
+panel.blocks.jumpmark.fields.jumpmark.help: Use a name that is unique within the page. Lowercase and no spaces.
+panel.blocks.spacer.name: Spacer
+panel.blocks.spacer.fields.height.label: Height
+panel.blocks.ai-label.name: AI disclosure
+panel.blocks.ai-label.fields.compact.label: Appearance
+panel.blocks.ai-label.fields.compact.help: The compact badge only shows “AI” and is meant to be combined with your own accompanying text.
+panel.blocks.ai-label.fields.compact.options.false: Full
+panel.blocks.ai-label.fields.compact.options.true: Compact
+panel.blocks.ai-label.fields.text.label: Accompanying text
+panel.blocks.ai-label.fields.text.help: Optional. Explains which part of the content was created with AI.

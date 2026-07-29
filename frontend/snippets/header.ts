@@ -1,7 +1,8 @@
 import DebugService from "../services/DebugService"
 
 /**
- * Custom element for header scroll behavior
+ * Custom element for header scroll behavior.
+ * The navigation itself is handled by the `main-menu` element.
  * @customElement scroll-header
  */
 class ScrollHeader extends HTMLElement {
@@ -12,7 +13,6 @@ class ScrollHeader extends HTMLElement {
 	private boundOnScroll: () => void
 	private resizeObserver: ResizeObserver | null = null
 	private headerHeight = 0 // Store the header height
-	private menuButton: HTMLButtonElement | null = null
 
 	constructor() {
 		super()
@@ -32,9 +32,6 @@ class ScrollHeader extends HTMLElement {
 		// Set up ResizeObserver for responsive adjustments
 		this.setupResizeObserver()
 
-		// Set up the menu toggle
-		this.setupMenuToggle()
-
 		// add class
 		this.headerElement.classList.add("ready")
 
@@ -51,8 +48,6 @@ class ScrollHeader extends HTMLElement {
 	disconnectedCallback(): void {
 		// Clean up event listeners
 		window.removeEventListener("scroll", this.boundOnScroll)
-		this.menuButton?.removeEventListener("click", this.toggleMenu)
-		this.removeEventListener("keydown", this.onKeydown)
 
 		// Clean up resize observer
 		if (this.resizeObserver) {
@@ -63,24 +58,6 @@ class ScrollHeader extends HTMLElement {
 		this.headerElement?.classList.remove("ready")
 
 		DebugService.log("Scroll header destroyed")
-	}
-
-	private setupMenuToggle(): void {
-		this.menuButton = this.querySelector('button[aria-controls="mainnav"]')
-		this.menuButton?.addEventListener("click", this.toggleMenu)
-		this.addEventListener("keydown", this.onKeydown)
-	}
-
-	private toggleMenu = (): void => {
-		const expanded = this.menuButton?.getAttribute("aria-expanded") === "true"
-		this.menuButton?.setAttribute("aria-expanded", String(!expanded))
-	}
-
-	private onKeydown = (event: KeyboardEvent): void => {
-		if (event.key !== "Escape") return
-		if (this.menuButton?.getAttribute("aria-expanded") !== "true") return
-		this.menuButton.setAttribute("aria-expanded", "false")
-		this.menuButton.focus()
 	}
 
 	private setupScrollListener(): void {
