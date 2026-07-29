@@ -20,8 +20,8 @@ return [
 				->area('system')
 				->toArray(),
 			'viewButtons' => [
-				'page' => ['typo-and-paste', 'accessibility-check', 'preview', 'settings', 'languages', 'status', 'open'],
-				'site' => ['preview', 'languages', 'open']
+				'page' => ['open', 'typo-and-paste', 'accessibility-check', 'preview', 'settings', 'languages', 'status'],
+				'site' => ['open', 'preview', 'languages']
 			]
 		],
 	],
