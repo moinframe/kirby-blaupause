@@ -1,10 +1,10 @@
 label: panel.fields.image.label
 type: files
 uploads:
-  parent: page.mediaPage
+  parent: model.mediaPage
   template: image
 empty: panel.fields.image.empty
 multiple: false
-query: page.mediaPage.files.filterBy('template', 'image')
+query: model.mediaPage.files.filterBy('template', 'image')
 image:
   back: black
