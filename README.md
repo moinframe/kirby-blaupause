@@ -73,7 +73,8 @@ The `frontend` is the last folder remaining and it's the home of all frontend so
 - Run `pnpm install` to install frontend dependencies
 - Run `pnpm build` to make an initial assets build
 - Run `composer install` to install backend dependencies
-- Optional: You can run `kirby init` to get rid of some of the boilerplate code and naming conventions. The script will guide you through the steps. You have to install the [Kirby CLI](https://github.com/getkirby/cli) (globally) to use that command.
+- Optional: You can run `kirby init` to get rid of some of the boilerplate code and naming conventions. The script will guide you through the steps and also generates a `CONTENT_SALT` and `COOKIE_KEY` in your `.env`. You have to install the [Kirby CLI](https://github.com/getkirby/cli) (globally) to use that command.
+- Without `kirby init`, set `CONTENT_SALT` and `COOKIE_KEY` in `.env` yourself — they must be unique per project (e.g. `openssl rand -hex 32`).
 
 ## Testing the template
 When changing template internals you can dry-run a fresh project generation with `scripts/test-template.sh`. It copies the tracked working-tree files into a throwaway sandbox, then installs it from scratch (`composer install`, `pnpm install`, `pnpm build`), so you can verify the template generates and builds cleanly.

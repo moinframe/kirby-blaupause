@@ -43,6 +43,50 @@ return [
 			return true;
 		};
 
+		$envPath = $root . '/.env';
+
+		// Make sure a .env exists, seeded from .env.example when available.
+		$ensureEnv = static function () use ($cli, $envPath, $root): void {
+			if (F::exists($envPath)) {
+				return;
+			}
+
+			if (F::exists($root . '/.env.example')) {
+				F::copy($root . '/.env.example', $envPath);
+				$cli->out('  - created .env from .env.example');
+				return;
+			}
+
+			F::write($envPath, '');
+		};
+
+		// Current value of a key in .env, empty string if unset or missing.
+		$getEnv = static function (string $key) use ($envPath): string {
+			if (F::exists($envPath) === false) {
+				return '';
+			}
+			$pattern = '/^' . preg_quote($key, '/') . '=(.*)$/m';
+			return preg_match($pattern, F::read($envPath), $m) === 1 ? trim($m[1]) : '';
+		};
+
+		// Replace a key in .env, appending it when it is not present yet.
+		$setEnv = static function (string $key, string $value) use ($envPath, $ensureEnv): void {
+			$ensureEnv();
+
+			$env     = F::read($envPath);
+			$line    = $key . '=' . $value;
+			$pattern = '/^' . preg_quote($key, '/') . '=.*$/m';
+
+			if (preg_match($pattern, $env) === 1) {
+				// callback replacement: the value may contain $ or \ sequences
+				$env = preg_replace_callback($pattern, static fn (): string => $line, $env);
+			} else {
+				$env = $env === '' ? $line . "\n" : rtrim($env, "\n") . "\n" . $line . "\n";
+			}
+
+			F::write($envPath, $env);
+		};
+
 		$changes = [];
 
 		// ── Names & metadata ───────────────────────────────────────────
@@ -130,24 +174,7 @@ return [
 
 			// Update APP_URL in .env
 			if ($cli->confirm('Set APP_URL in .env to ' . $url . '?')->confirmed()) {
-				$envPath = $root . '/.env';
-
-				if (F::exists($envPath) === false) {
-					if (F::exists($root . '/.env.example')) {
-						F::copy($root . '/.env.example', $envPath);
-						$cli->out('  - created .env from .env.example');
-					} else {
-						F::write($envPath, '');
-					}
-				}
-
-				$env = F::read($envPath);
-				if (preg_match('/^APP_URL=.*$/m', $env)) {
-					$env = preg_replace('/^APP_URL=.*$/m', 'APP_URL=' . $url, $env);
-				} else {
-					$env = 'APP_URL=' . $url . "\n" . ltrim($env);
-				}
-				F::write($envPath, $env);
+				$setEnv('APP_URL', $url);
 				$cli->out('  - updated .env');
 				$changes[] = '.env APP_URL';
 			}
@@ -168,6 +195,36 @@ return [
 					$changes[] = 'local config file';
 				}
 			}
+		}
+
+		// ── Security keys (.env) ───────────────────────────────────────
+		// content.salt and cookie.key are read from .env in
+		// backend/site/config/config/security.php and must be unique per project.
+		$secrets = ['CONTENT_SALT', 'COOKIE_KEY'];
+		$missing = array_values(array_filter($secrets, static fn (string $key): bool => $getEnv($key) === ''));
+		$present = array_values(array_diff($secrets, $missing));
+
+		$rotate = [];
+
+		if ($missing !== [] && $cli->confirm('Generate a secure ' . implode(' and ', $missing) . ' in .env?')->confirmed()) {
+			$rotate = $missing;
+		}
+
+		if ($present !== []) {
+			$cli->out(implode(' and ', $present) . ' already set in .env.');
+			$cli->out('  Regenerating invalidates existing sessions, media URLs and preview tokens.');
+
+			if ($cli->confirm('Regenerate ' . implode(' and ', $present) . ' anyway?')->confirmed()) {
+				$rotate = [...$rotate, ...$present];
+			}
+		}
+
+		if ($rotate !== []) {
+			foreach ($rotate as $key) {
+				$setEnv($key, bin2hex(random_bytes(32)));
+			}
+			$cli->out('  - generated ' . implode(' and ', $rotate) . ' in .env');
+			$changes[] = 'security keys';
 		}
 
 		// ── Template cleanup ───────────────────────────────────────────
