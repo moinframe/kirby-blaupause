@@ -1,5 +1,5 @@
 /* Add spacing between tabs and header line */
-.k-header+.k-tabs {
+.k-header + .k-tabs {
 	margin-top: var(--spacing-2);
 }
 

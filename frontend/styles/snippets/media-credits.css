@@ -9,7 +9,6 @@
 	padding: var(--space-s);
 	gap: var(--space-xs);
 	flex-wrap: wrap;
-
 }
 
 .media-credits__item {

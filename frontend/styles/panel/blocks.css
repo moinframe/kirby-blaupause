@@ -4,7 +4,6 @@
 }
 
 .k-block-container {
-
 	/*
 		Remove borders of the last block in a row
 	*/
@@ -15,19 +14,19 @@
 	/*
 	Reduce the outline of the selected block
 	*/
-	&[data-selected=true] {
+	&[data-selected="true"] {
 		outline: 1px solid var(--color-gray-400);
 
 		/*
 			Remove the outline of the parent if child blocks are selected
 		*/
-		&:has(.k-block-container[data-selected=true]) {
+		&:has(.k-block-container[data-selected="true"]) {
 			outline: none;
 
 			/*
 				Hide options toolbar of the parent if child block is selected
 			*/
-			&>.k-block-options {
+			& > .k-block-options {
 				display: none;
 			}
 		}
@@ -38,7 +37,7 @@
 	background-color: transparent;
 	box-shadow: none;
 
-	&>.k-blocks-list>.k-block-container {
+	& > .k-blocks-list > .k-block-container {
 		&:not(:last-of-type) {
 			border-bottom: none;
 			margin-bottom: 1rem;
@@ -123,16 +122,16 @@
 	--text-line-height: var(--line-height-title);
 }
 
-.k-block-type-image .k-block-figure-container> :is(img, .k-image-frame) {
+.k-block-type-image .k-block-figure-container > :is(img, .k-image-frame) {
 	display: block;
 	max-width: min(100%, var(--block-maxwidth, 100%));
 	margin-inline: auto;
 }
 
-.k-block-type-image .k-block-figure[data-alignment="left"] .k-block-figure-container> :is(img, .k-image-frame) {
+.k-block-type-image .k-block-figure[data-alignment="left"] .k-block-figure-container > :is(img, .k-image-frame) {
 	margin-inline: 0 auto;
 }
 
-.k-block-type-image .k-block-figure[data-alignment="right"] .k-block-figure-container> :is(img, .k-image-frame) {
+.k-block-type-image .k-block-figure[data-alignment="right"] .k-block-figure-container > :is(img, .k-image-frame) {
 	margin-inline: auto 0;
 }

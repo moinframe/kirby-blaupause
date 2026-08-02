@@ -15,7 +15,7 @@ content-blocker {
 	display: grid;
 	grid-template-areas: "stack";
 
-	&>* {
+	& > * {
 		grid-area: stack;
 	}
 }
@@ -77,7 +77,7 @@ content-blocker {
 		display: none;
 	}
 
-	content-blocker>noscript {
+	content-blocker > noscript {
 		display: grid;
 		position: absolute;
 		inset: 0;

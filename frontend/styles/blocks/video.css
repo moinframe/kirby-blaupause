@@ -2,7 +2,6 @@
 	position: relative;
 
 	figure {
-
 		.block-video__media {
 			position: relative;
 			aspect-ratio: var(--aspect-ratio);

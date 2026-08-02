@@ -113,7 +113,6 @@
 }
 
 .menubar__toggle {
-
 	&[aria-expanded="false"] .i[data-icon="close"],
 	&[aria-expanded="true"] .i[data-icon="menu"] {
 		display: none;
@@ -168,8 +167,8 @@
 		display var(--animation-duration) allow-discrete;
 }
 
-[aria-expanded="true"]+.menubar__nav,
-[aria-expanded="true"]+.menubar__flyout {
+[aria-expanded="true"] + .menubar__nav,
+[aria-expanded="true"] + .menubar__flyout {
 	display: flex;
 	opacity: 1;
 
@@ -195,7 +194,7 @@
 		display var(--animation-duration) allow-discrete;
 }
 
-[aria-expanded="true"]+.menubar__nav {
+[aria-expanded="true"] + .menubar__nav {
 	translate: -50% 0;
 
 	@starting-style {
@@ -339,8 +338,7 @@
 		border-radius: var(--menubar-item-radius);
 		background: var(--menubar-hover);
 		color: var(--color-neutral-900);
-		transition:
-			opacity var(--animation-duration) var(--animation-ease);
+		transition: opacity var(--animation-duration) var(--animation-ease);
 	}
 
 	.menubar__preview--parent {
