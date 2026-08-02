@@ -16,11 +16,13 @@ return [
 	// Plugin configurations
 	...require __DIR__ . '/plugins/distantnative.retour.php',
 	...require __DIR__ . '/plugins/femundfilou.asset-manager.php',
-	...require __DIR__ . '/plugins/femundfilou.image-snippet.php',
+	...require __DIR__ . '/plugins/moinframe.image-snippet.php',
+	...require __DIR__ . '/plugins/philippoehrlein.typo-and-paste.php',
+
+	// Project configurations
 	...require __DIR__ . '/plugins/project.headers.php',
 	...require __DIR__ . '/plugins/project.sitemap.php',
 	...require __DIR__ . '/plugins/project.plausible.php',
-	...require __DIR__ . '/plugins/philippoehrlein.typo-and-paste.php',
 
 	// Routes
 	'routes' => require __DIR__ . '/routes/index.php',
