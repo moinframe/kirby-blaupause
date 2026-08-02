@@ -45,8 +45,8 @@ export default defineConfig(({ mode }) => {
 		],
 		resolve: {
 			alias: {
-				"@styles": resolve(__dirname, "frontend/styles/"),
-				"@": resolve(__dirname, "frontend/")
+				"@styles": resolve(import.meta.dirname, "frontend/styles/"),
+				"@": resolve(import.meta.dirname, "frontend/")
 			}
 		}
 	}
