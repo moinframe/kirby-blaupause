@@ -1,0 +1,7 @@
+name: panel.blocks.sticky.name
+icon: pin
+fields:
+  info:
+    type: info
+    theme: none
+    text: panel.blocks.sticky.fields.info.text

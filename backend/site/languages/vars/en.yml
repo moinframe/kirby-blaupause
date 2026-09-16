@@ -195,6 +195,8 @@ panel.blocks.jumpmark.fields.jumpmark.label: Identifier
 panel.blocks.jumpmark.fields.jumpmark.help: Use a name that is unique within the page. Lowercase and no spaces.
 panel.blocks.spacer.name: Spacer
 panel.blocks.spacer.fields.height.label: Height
+panel.blocks.sticky.name: Sticky column
+panel.blocks.sticky.fields.info.text: The column this block sits in stays in place while the neighbouring column keeps scrolling. Where you put the block within the column makes no difference – the whole column always sticks. In single-column layouts and on narrow screens it has no effect.
 panel.blocks.ai-label.name: AI disclosure
 panel.blocks.ai-label.fields.compact.label: Appearance
 panel.blocks.ai-label.fields.compact.help: The compact badge only shows “AI” and is meant to be combined with your own accompanying text.

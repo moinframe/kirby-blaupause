@@ -1,0 +1,16 @@
+.flow:has(> .flow > .block-type-sticky) {
+	justify-content: start;
+}
+
+.flow:has(> .block-type-sticky) {
+	position: sticky;
+	top: var(--sticky-top, calc(var(--header-height, 55px) + var(--space-s)));
+
+	&>.block {
+		content-visibility: visible;
+	}
+}
+
+.block-type-sticky {
+	display: none;
+}

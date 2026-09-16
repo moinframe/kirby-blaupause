@@ -195,6 +195,8 @@ panel.blocks.jumpmark.fields.jumpmark.label: Identifikator
 panel.blocks.jumpmark.fields.jumpmark.help: Hier sollte ein für die Seite einzigartiger Name verwendet werden. Kleinschreibung und keine Leerzeichen.
 panel.blocks.spacer.name: Abstand
 panel.blocks.spacer.fields.height.label: Höhe
+panel.blocks.sticky.name: Mitlaufende Spalte
+panel.blocks.sticky.fields.info.text: Die Spalte, in der dieser Block liegt, bleibt beim Scrollen stehen, solange die Nachbarspalte noch weiterläuft. An welcher Stelle der Spalte der Block sitzt, spielt dabei keine Rolle – es bleibt immer die ganze Spalte stehen. In einspaltigen Layouts und auf schmalen Bildschirmen passiert nichts.
 panel.blocks.ai-label.name: KI-Kennzeichnung
 panel.blocks.ai-label.fields.compact.label: Darstellung
 panel.blocks.ai-label.fields.compact.help: Das kompakte Zeichen zeigt nur „AI“ und ist für die Kombination mit einem eigenen Begleittext gedacht.
