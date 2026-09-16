@@ -1,16 +1,22 @@
 label: panel.files.image.label
 accept:
   extension: jpg, jpeg, png, webp, svg, gif
-fields:
-  copyright:
-    label: panel.files.image.fields.copyright.label
-    type: text
-    before: ©
-    width: 1/2
-  ai:
-    extends: fields/ai
-    width: 1/2
-  alt:
-    label: panel.files.image.fields.alt.label
-    type: text
-    width: 1/1
+columns:
+  - width: 1/2
+    fields:
+      copyright:
+        label: panel.files.image.fields.copyright.label
+        type: text
+        before: ©
+        width: 1/2
+      ai:
+        extends: fields/ai
+        width: 1/2
+      alt:
+        label: panel.files.image.fields.alt.label
+        type: text
+        width: 1/1
+  - width: 1/2
+    sections:
+      references:
+        type: references
