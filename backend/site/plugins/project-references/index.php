@@ -2,6 +2,10 @@
 
 use Kirby\Cms\App;
 
+$flush = function (): void {
+	kirby()->cache('project.references')->flush();
+};
+
 App::plugin(
 	'project/references',
 	[
@@ -10,6 +14,12 @@ App::plugin(
 			'expiration' => 15,
 		],
 		'sections' => require __DIR__ . '/src/extensions/sections.php',
+		'hooks' => [
+			'page.update:after' => $flush,
+			'page.delete:after' => $flush,
+			'page.duplicate:after' => $flush,
+			'site.update:after' => $flush,
+		],
 		'translations' => [
 			'en' => [
 				'project.references.noReferences' => 'No references found.',
