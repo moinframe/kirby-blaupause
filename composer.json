@@ -30,7 +30,7 @@
 		"moinframe/kirby-accessibility-check": "^1.1",
 		"junohamburg/kirby-language-selector": "^2.0"
 	},
-	"minimum-stability": "beta",
+	"minimum-stability": "stable",
 	"prefer-stable": true,
 	"config": {
 		"vendor-dir": "backend/vendor",

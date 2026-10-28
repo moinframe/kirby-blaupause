@@ -1,11 +1,5 @@
 module.exports = {
-	content: [
-		"./frontend/**/*.js",
-		"./frontend/**/*.ts",
-		"./frontend/**/*.svelte",
-		"./backend/site/**/*.php",
-		"./backend/site/**/**/*.php"
-	],
+	content: ["./frontend/**/*.js", "./frontend/**/*.ts", "./backend/site/**/*.php", "./backend/site/**/**/*.php"],
 	css: ["public/build/assets/!(panel*).css"],
 	output: ["public/build/assets/"],
 	// Default extractor splits on ":", which would purge cleacss responsive utilities like "is-hidden:m"

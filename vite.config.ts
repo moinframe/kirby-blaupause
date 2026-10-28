@@ -1,5 +1,4 @@
 import { resolve } from "node:path"
-import { svelte } from "@sveltejs/vite-plugin-svelte"
 import browserslist from "browserslist"
 import { globSync } from "glob"
 import laravel from "laravel-vite-plugin"
@@ -28,7 +27,6 @@ export default defineConfig(({ mode }) => {
 			}
 		},
 		plugins: [
-			svelte(),
 			laravel({
 				input: [
 					"frontend/index.ts",
